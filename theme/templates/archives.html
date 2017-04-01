@@ -10,15 +10,18 @@
 
 {% block content %}
 <div class="article">
-    <table class="table">
-        <tbody>
+    <ul>
         {% for article in dates %}
-            <tr>
-                <td class="span3">{{ article.date.strftime("%Y-%m-%d") }}</td>
-                <td class="span9"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></td>
-            </tr>
+            {% set cur_year = article.date|strftime("%Y") %}
+            {% if loop.first %}
+                <li><a href="{{ SITEURL }}/archives/{{ cur_year }}/">{{ cur_year }}</a></li>
+            {% else %}
+                {% set prev_year = dates[loop.index0 - 1].date|strftime("%Y") %}
+                {% if cur_year != prev_year %}
+                <li><a href="{{ SITEURL }}/archives/{{ cur_year }}/">{{ cur_year }}</a></li>
+                {% endif %}
+            {% endif %}
         {% endfor %}
-        </tbody>
-    </table>
+    </ul>
 </div>
 {% endblock %}

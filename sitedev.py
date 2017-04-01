@@ -117,7 +117,7 @@ CATEGORIES_URL = 'category/' # defines where to save a categories page, it's act
 CATEGORIES_SAVE_AS = 'category/index.html'
 
 YEAR_ARCHIVE_SAVE_AS = 'archives/{date:%Y}/index.html' # activates rendering an archive page per year/month/day
-MONTH_ARCHIVE_SAVE_AS = 'archives/{date:%Y}/{date:%m}/index.html'
+MONTH_ARCHIVE_SAVE_AS = ''
 DAY_ARCHIVE_SAVE_AS = ''
 
 # additional pages
