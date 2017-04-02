@@ -16,7 +16,7 @@ TIMEZONE = 'Europe/Berlin'
 THEME = "/home/vorakl/repos/my/bitbucket/vorakl.github.io/theme"
 DEFAULT_LANG = u'en'
 RELATIVE_URLS = True  # disable in public version
-DEFAULT_PAGINATION = 3 
+DEFAULT_PAGINATION = 2 
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 PLUGINS = ['minify']
 
@@ -28,14 +28,19 @@ OUTPUT_RETENTION = [".git", "CNAME", "README.md"] # but these dirs and files sho
 ############################
 
 #MENUITEMS = [("Github", "https://github.com/vorakl"), ("LinkedIn", "https://linkedin.com/in/vorakl/")]
+DISPLAY_MENU = True
 DISPLAY_PAGES_ON_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = False
-DISPLAY_ARCHIVES = True
-DISPLAY_CATEGORIES = True
-DISPLAY_TAGS = True
-DISPLAY_AUTHORS = False
+
+DISPLAY_SIDEBAR = True
+DISPLAY_ARCHIVES_ON_SIDEBAR = True
+DISPLAY_CATEGORIES_ON_SIDEBAR = True
+DISPLAY_TAGS_ON_SIDEBAR = True
+DISPLAY_AUTHORS_ON_SIDEBAR = False # It's turned off because I'm the only one author on this site
+DISPLAY_SUBSCRIBES_ON_SIDEBAR = True
+DISPLAY_SITE_ON_SIDEBAR = True
+
 DISPLAY_AUTHOR = False # Add an author in a article's metadata
-DISPLAY_SUBSCRIBES = True
 
 
 ### Feed's specification 
