@@ -10,18 +10,33 @@
 
 {% block content %}
 <div class="article">
-    <ul>
+    <table class="table">
+        <tbody>
+
+{% set months -%}
+{% for n in range (0, 10) -%}{{ n }}{%- endfor %}
+{%- endset %}
+
         {% for article in dates %}
             {% set cur_year = article.date|strftime("%Y") %}
             {% if loop.first %}
-                <li><a href="{{ SITEURL }}/archives/{{ cur_year }}/">{{ cur_year }}</a></li>
+                <tr>
+                    <td class="span3"><a href="{{ SITEURL }}/archives/{{ cur_year }}/">{{ cur_year }}</a></td>
+                    <td class="span9"></td>
+                </tr>
             {% else %}
                 {% set prev_year = dates[loop.index0 - 1].date|strftime("%Y") %}
                 {% if cur_year != prev_year %}
-                <li><a href="{{ SITEURL }}/archives/{{ cur_year }}/">{{ cur_year }}</a></li>
+                    <tr>
+                        <td class="span3"><a href="{{ SITEURL }}/archives/{{ cur_year }}/">{{ cur_year }}</a></td>
+                        <td class="span9">{{ months|list }}</td>
+                    </tr>
                 {% endif %}
             {% endif %}
         {% endfor %}
-    </ul>
+
+        </tbody>
+    </table>
 </div>
 {% endblock %}
+
