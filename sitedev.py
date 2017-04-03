@@ -16,7 +16,7 @@ TIMEZONE = 'Europe/Berlin'
 THEME = "/home/vorakl/repos/my/bitbucket/vorakl.github.io/theme"
 DEFAULT_LANG = u'en'
 RELATIVE_URLS = True  # disable in public version
-DEFAULT_PAGINATION = 2 
+DEFAULT_PAGINATION = 10
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 PLUGINS = ['minify']
 
@@ -122,7 +122,7 @@ CATEGORIES_URL = 'category/' # defines where to save a categories page, it's act
 CATEGORIES_SAVE_AS = 'category/index.html'
 
 YEAR_ARCHIVE_SAVE_AS = 'archives/{date:%Y}/index.html' # activates rendering an archive page per year/month/day
-MONTH_ARCHIVE_SAVE_AS = ''
+MONTH_ARCHIVE_SAVE_AS = 'archives/{date:%Y}/{date:%m}/index.html'
 DAY_ARCHIVE_SAVE_AS = ''
 
 # additional pages
