@@ -16,9 +16,14 @@ TIMEZONE = 'Europe/Berlin'
 THEME = "/home/vorakl/repos/my/bitbucket/vorakl.github.io/theme"
 DEFAULT_LANG = u'en'
 RELATIVE_URLS = True  # disable in public version
-DEFAULT_PAGINATION = 10
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 PLUGINS = ['minify']
+
+DEFAULT_PAGINATION = 2 # Turns on the pagination
+PAGINATION_PATTERNS = (
+    (1, '{base_name}/', '{base_name}/index.html'),
+    (2, '{base_name}/p{number}/', '{base_name}/p{number}/index.html'),
+)
 
 DELETE_OUTPUT_DIRECTORY = True  # build an output dir from scratch every time
 OUTPUT_RETENTION = [".git", "CNAME", "README.md"] # but these dirs and files should be kept
@@ -111,7 +116,8 @@ AUTHOR_URL = 'author/{slug}/'
 DIRECT_TEMPLATES = ['index', 'categories', 'tags', 'authors', 'archives']
 PAGINATED_DIRECT_TEMPLATES = ['index']
 
-INDEX_SAVE_AS = 'index.html'
+INDEX_SAVE_AS = 'news/index.html'
+INDEX_URL = 'news/'
 AUTHORS_SAVE_AS = 'author/index.html'  # defines where to save an authors page, it's activated by DIRECT_TEMPLATES 
 AUTHORS_URL = 'author/'
 ARCHIVES_SAVE_AS = 'archives/index.html' # defines where to save an archives page, it's activated by DIRECT_TEMPLATES 
