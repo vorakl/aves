@@ -12,14 +12,15 @@ SITEDESC = u'A technical blog of Oleksii Tsvietnov about Software Engineering'
 PATH = 'content' # the location of all content
 ARTICLE_PATHS = ['articles'] # a place for articles under the content location
 CONTACT_PAGE = 'about'
+START_URL = 'news/' # What's a start point of a site (like 'news/' or 'pages/about/')?
 TIMEZONE = 'Europe/Berlin'
 THEME = "/home/vorakl/repos/my/bitbucket/vorakl.github.io/theme"
 DEFAULT_LANG = u'en'
 RELATIVE_URLS = True  # disable in public version
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
-PLUGINS = ['minify']
+PLUGINS = ['minify'] # keep 'minify' plugin as the last element in the list to minify all output HTMLs
 
-DEFAULT_PAGINATION = 2 # Turns on the pagination
+DEFAULT_PAGINATION = 10 # Turns on the pagination
 PAGINATION_PATTERNS = (
     (1, '{base_name}/', '{base_name}/index.html'),
     (2, '{base_name}/p{number}/', '{base_name}/p{number}/index.html'),
@@ -32,10 +33,10 @@ OUTPUT_RETENTION = [".git", "CNAME", "README.md"] # but these dirs and files sho
 ### Interface configuration
 ############################
 
-#MENUITEMS = [("Github", "https://github.com/vorakl"), ("LinkedIn", "https://linkedin.com/in/vorakl/")]
 DISPLAY_MENU = True
 DISPLAY_PAGES_ON_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = False
+DISPLAY_ITEMS_ON_MENU = False # Items are set in the MENUITEMS variable below
 
 DISPLAY_SIDEBAR = True
 DISPLAY_ARCHIVES_ON_SIDEBAR = True
@@ -44,7 +45,10 @@ DISPLAY_TAGS_ON_SIDEBAR = True
 DISPLAY_AUTHORS_ON_SIDEBAR = False # It's turned off because I'm the only one author on this site
 DISPLAY_SUBSCRIBES_ON_SIDEBAR = True
 DISPLAY_SITE_ON_SIDEBAR = True
+DISPLAY_LINKS_ON_SIDEBAR = False # Links are set in the LINKS variable below
 
+#MENUITEMS = [("Github", "https://github.com/vorakl"), ("LinkedIn", "https://linkedin.com/in/vorakl/")]
+#LINKS = [("Github", "https://github.com/vorakl"), ("LinkedIn", "https://linkedin.com/in/vorakl/")]
 DISPLAY_AUTHOR = False # Add an author in a article's metadata
 
 
@@ -135,5 +139,6 @@ DAY_ARCHIVE_SAVE_AS = ''
 
 # a hash array with an extra list of 'templates+output_filename' for rendering besides of blog posts
 # The output filename is needed because they don't have *_SAVE_AS variables
-TEMPLATE_PAGES = {'sitemap.html': 'sitemap.xml'} 
+TEMPLATE_PAGES = {'sitemap.html': 'sitemap.xml',
+                  'start.html': 'index.html'} 
 
