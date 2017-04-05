@@ -10,10 +10,15 @@
 
 {% block content %}
 <div class="article">
-    <ul>
+    <table class="table">
+        <tbody>
         {% for tag, articles in tags|sort %}
-            <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }} ({{ articles|count }})</a></li>
+                <tr>
+                    <td class="span3"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></td>
+                    <td class="span9">{{ TAGS_DESCRIPTION[tag] if tag in TAGS_DESCRIPTION|list else '' }}</td>
+                </tr>
         {% endfor %}
-    </ul>
+        </tbody>
+    </table>
 </div>
 {% endblock %}

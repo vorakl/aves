@@ -51,6 +51,23 @@ DISPLAY_LINKS_ON_SIDEBAR = False # Links are set in the LINKS variable below
 #LINKS = [("Github", "https://github.com/vorakl"), ("LinkedIn", "https://linkedin.com/in/vorakl/")]
 DISPLAY_AUTHOR = False # Add an author in a article's metadata
 
+CATEGORIES_DESCRIPTION = {
+        "article": "A full story about some specific topic",
+        "howto": "A practical guide how to make something",
+        "tutorial": "A theoretical explanation of a topic with examples",
+        "hint": "A hint of how to make something easier",
+        "trick": "A not always obvious way to get something",
+        "20-80": "It is that 20% of knowledge which helps to do 80% of the work", 
+        }
+TAGS_DESCRIPTION = {
+        "bash": "A programming language",
+        "python": "A programming language",
+        "lua": "A programming language",
+        "c": "A programming language",
+        "docker": "A container platform",
+        "mesos": "A run-time platform",
+        "misc": "Miscellaneous information"
+        }
 
 ### Feed's specification 
 #########################
@@ -73,7 +90,6 @@ TAG_FEED_RSS = None
 #################################
 
 STATIC_PATHS = [
-    'articles', 
     'images', 
     'files', 
     'static/robots.txt', 
@@ -121,7 +137,6 @@ DIRECT_TEMPLATES = ['index', 'categories', 'tags', 'authors', 'archives']
 PAGINATED_DIRECT_TEMPLATES = ['index']
 
 INDEX_SAVE_AS = 'news/index.html'
-INDEX_URL = 'news/'
 AUTHORS_SAVE_AS = 'author/index.html'  # defines where to save an authors page, it's activated by DIRECT_TEMPLATES 
 AUTHORS_URL = 'author/'
 ARCHIVES_SAVE_AS = 'archives/index.html' # defines where to save an archives page, it's activated by DIRECT_TEMPLATES 
