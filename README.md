@@ -23,7 +23,7 @@ The installation process is fairly trivial. Just clone this repository and set a
 
 The example of a site's configuration with articles, pages, sitemap, robots.txt, favicon.ico, etc which is assumed to be used in GitHub Pages is presented at the separate branch [example](https://github.com/vorakl/aves/tree/example).
 
-Another example of using this theme in live is [my site](http://vorakl.name/)
+Another example of using this theme in live is [my site](http://vorakl.name/).
 
 ## index.html
 
