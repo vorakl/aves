@@ -10,6 +10,8 @@ It's based on the [tuxlite_tbs](https://github.com/getpelican/pelican-themes/tre
 * Lists of categories and tags with descriptions
 * Configurable start page
 * A paginator for the unlimited number of pages
+* It's configured to hiding all html files in the end of links. All URLs end with a slash
+* A correct year's part of the copyright  string accordingly to dates of a first and a last articles
 
 ## Installation
 
@@ -17,7 +19,7 @@ The installation process is fairly trivial. Just clone this repository and set a
 
 ## Example
 
-The example of fully configured site with articles, pages, sitemap, robots.txt, favicon.ico, etc which is assumed to be used in GitHub Pages is presented at the separate branch [example]()
+The example of fully configured site with articles, pages, sitemap, robots.txt, favicon.ico, etc which is assumed to be used in GitHub Pages is presented at the separate branch [example](https://github.com/vorakl/aves/tree/example)
 
 ## index.html
 
