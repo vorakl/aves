@@ -1,6 +1,7 @@
 # Aves 
 
 A theme for [Pelican](https://github.com/getpelican/pelican) (a static site generator).
+
 It's based on the [tuxlite_tbs](https://github.com/getpelican/pelican-themes/tree/master/tuxlite_tbs) theme but was significantly rewritten and extended by new features and customization.
 
 ## Features
@@ -12,14 +13,17 @@ It's based on the [tuxlite_tbs](https://github.com/getpelican/pelican-themes/tre
 * A paginator for the unlimited number of pages
 * It's configured to hiding all html files in the end of links. All URLs end with a slash
 * A correct year's part of the copyright  string accordingly to dates of a first and a last articles
+* Bonus: a simplified version of a Makefile for bundling CSS and JS files, render a site, check it on the local Nginx which is running from the official docker image (installed Docker is required) and publish it to the GitHub Pages
 
 ## Installation
 
 The installation process is fairly trivial. Just clone this repository and set a path to the theme's directory in the `THEME` variable of `pelicanconf.py`. This theme relies on a bunch of variables which are set in specific values. So, in addition, you need to adjust a configuration of your site accordingly to provided example files `pelicanconf.py.example` and `publishconf.py.example`.
 
-## Example
+## Examples
 
-The example of fully configured site with articles, pages, sitemap, robots.txt, favicon.ico, etc which is assumed to be used in GitHub Pages is presented at the separate branch [example](https://github.com/vorakl/aves/tree/example)
+The example of a site's configuration with articles, pages, sitemap, robots.txt, favicon.ico, etc which is assumed to be used in GitHub Pages is presented at the separate branch [example](https://github.com/vorakl/aves/tree/example).
+
+Another example of using this theme in live is [my site](http://vorakl.name/)
 
 ## index.html
 
