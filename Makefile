@@ -4,7 +4,7 @@ PELICANOPTS=
 
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
-OUTPUTDIR=/home/vorakl/repos/my/github/vorakl.github.io
+OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/sitedev.py
 PUBLISHCONF=$(BASEDIR)/siteprod.py
 STATICDIR=$(BASEDIR)/theme/static
@@ -22,7 +22,7 @@ ifeq ($(RELATIVE), 1)
 	PELICANOPTS += --relative-urls
 endif
 
-.PHONY: html help serve publish gh
+.PHONY: html help serve publish github
 
 help:
 	@echo 'Makefile for a pelican Web site                                           '
@@ -53,7 +53,7 @@ serve:
 publish: 
 	@$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
-gh: publish
+github: publish
 	@cd $(OUTPUTDIR) && \
 	  git add . && \
 	  git commit -m "New content" && \
