@@ -8,10 +8,10 @@ from __future__ import unicode_literals
 AUTHOR = u'Oleksii Tsvietnov'
 SITENAME = u"Engineer's notes"
 SITEURL = 'http://vorakl.name'
-SITEDESC = u'A technical blog of Oleksii Tsvietnov about Software Engineering'
+SITEDESC = u'A technical blog about Software Engineering'
 PATH = 'content' # the location of all content
 ARTICLE_PATHS = ['articles'] # a place for articles under the content location
-CONTACT_PAGE = 'about'
+CONTACT_URL = 'pages/about/'
 START_URL = 'news/' # What's a start point of a site (like 'news/' or 'pages/about/')?
 TIMEZONE = 'Europe/Berlin'
 THEME = "/home/vorakl/repos/my/bitbucket/vorakl.github.io/theme"

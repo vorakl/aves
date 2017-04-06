@@ -2,7 +2,7 @@
 
 {% block content_title %}
 <div class="content-title">
-    <h1>A Technical Blog about Software Engineering</h1>
+    <h1>{{ SITEDESC|default("This is a default site description") }}</h1>
 </div>
 {% endblock %}
 

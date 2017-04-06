@@ -19,7 +19,7 @@
 
 <body>
 
-{% if DISPLAY_MENU %}
+{% if DISPLAY_MENU|default("true") %}
 <div class="navbar">
     <div class="navbar-inner">
     <div class="container">
@@ -32,12 +32,12 @@
 <div class="container">
     <div class="content">
     <div class="row">
-        <div{% if DISPLAY_SIDEBAR %} class="span9"{% else %} class="span12"{% endif %}>
+        <div{% if DISPLAY_SIDEBAR|default("true") %} class="span9"{% else %} class="span12"{% endif %}>
             {% block content_title %}{% endblock %}
             {% block content %}{% endblock %}
         </div>
 
-        {% if DISPLAY_SIDEBAR %}                
+        {% if DISPLAY_SIDEBAR|default("true") %}                
             <div class="span3">
                 {% include "sidebar.html" %}
             </div>
@@ -61,7 +61,7 @@
 
         <p>
             <span class="pull-left">
-            {{ SITENAME }} &copy; {{ copy_date }} <a href="{{ SITEURL }}/pages/{{ CONTACT_PAGE }}">{{ AUTHOR }}</a>
+            {{ SITENAME }} &copy; {{ copy_date }} <a href="{{ SITEURL }}/{{ CONTACT_URL|default("#") }}">{{ AUTHOR }}</a>
             </span>
             <span class="pull-right">
                 Powered by <a href="https://github.com/getpelican/pelican">Pelican</a> and <a href="https://github.com/vorakl/pelican-theme-tuxlite_simple">tuxlite_simple</a> theme
