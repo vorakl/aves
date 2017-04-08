@@ -5,13 +5,13 @@ PELICANOPTS=
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=$(BASEDIR)/output
-CONFFILE=$(BASEDIR)/sitedev.py
-PUBLISHCONF=$(BASEDIR)/siteprod.py
+CONFFILE=$(BASEDIR)/pelicanconf.py
+PUBLISHCONF=$(BASEDIR)/publishconf.py
 STATICDIR=$(BASEDIR)/theme/static
 
 GITHUB_PAGES_BRANCH=master
 
-PORT ?= 80
+PORT ?= 8000
 DEBUG ?= 0
 ifeq ($(DEBUG), 1)
 	PELICANOPTS += -D
@@ -31,7 +31,7 @@ help:
 	@echo '   make html                       (re)generate the web site              '
 	@echo '   make publish                    generate using production settings     '
 	@echo '   make bundle                     generate bundled version of CSS and JS '
-	@echo '   make serve [PORT=80]            serve site at http://localhost:80      '
+	@echo '   make serve [PORT=8000]          serve site at http://localhost:8000/   '
 	@echo '   make github                     upload the web site via gh-pages       '
 	@echo '                                                                          '
 	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html   '
@@ -47,8 +47,13 @@ bundle:
 	cat jquery.min.js bootstrap-collapse.min.js > jquery-bootstrap-collapse.bundle.min.js
 
 serve:
-	@echo 'Launching a docker container with Nginx on port $(PORT)'
-	@docker run --rm -it -p $(PORT):80 -v $(OUTPUTDIR):/usr/share/nginx/html nginx:mainline-alpine
+	@docker version &>/dev/null && { \
+		echo 'Launching a docker container with Nginx on port $(PORT)'; \
+		docker run --rm -it -p $(PORT):80 -v $(OUTPUTDIR):/usr/share/nginx/html nginx:mainline-alpine; } \
+	|| { \
+		echo 'Launching Pelican Server on port $(PORT)'; \
+		cd $(OUTPUTDIR) && $(PY) -m pelican.server $(PORT); \
+	}
 
 publish: 
 	@$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
