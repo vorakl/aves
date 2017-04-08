@@ -13,6 +13,6 @@ sys.path.append(os.curdir)
 from sitedev import *
 
 RELATIVE_URLS = False
-GOOGLE_ANALYTICS = 'UA-??????'
+GOOGLE_ANALYTICS = 'UA-12345678-90'
 FEED_EMAIL = 'https://feedburner.google.com/fb/a/mailverify?uri=sitefeed/atom&amp;loc=en_US'
 FEED_DOMAIN = 'http://feeds.feedburner.com'
