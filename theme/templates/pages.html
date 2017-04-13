@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
-{% block title %}{{ SITENAME }} - Tags{% endblock %}
+{% block title %}{{ SITENAME }} :: Pages{% endblock %}
 
 {% block content_title %}
 <div class="content-title">                                                                                                             
-    <h1>Tags</h1>
+    <h1>Pages</h1>
 </div>
 {% endblock %}
 
@@ -12,12 +12,12 @@
 <div class="article">
     <table class="table">
         <tbody>
-        {% for tag, articles in tags|sort %}
+            {% for page in pages|sort %}
                 <tr>
-                    <td class="span3"><a href="{{ SITEURL }}/{{ tag.url }}?v={{ SITE_VERSION }}">{{ tag }}</a></td>
-                    <td class="span9">{{ TAGS_DESCRIPTION[tag] if tag in TAGS_DESCRIPTION|list else '' }}</td>
+                    <td class="span3"><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></td>
+                    <td class="span9">{{ page.summary|striptags }}</td>
                 </tr>
-        {% endfor %}
+            {% endfor %}
         </tbody>
     </table>
 </div>

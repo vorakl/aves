@@ -6,17 +6,21 @@ from __future__ import unicode_literals
 ########################
 
 AUTHOR = u'Oleksii Tsvietnov'
-SITENAME = u"Engineer's notes"
+SITENAME = u"Vorakl's notes"
 SITEURL = 'http://vorakl.name'
 SITEDESC = u'A technical blog about Software Engineering'
+SITE_VERSION = '1492036226'
+SITE_KEYWORDS = 'vorakl,Oleksii Tsvietnov,blog,software engineer'
 PATH = 'content' # the location of all content
+ARTICLE_PATHS = ['articles'] # a place for articles under the content location
 CONTACT_URL = 'pages/about/'
 START_URL = 'news/' # What's a start point of a site (like 'news/' or 'pages/about/')?
 TIMEZONE = 'Europe/Berlin'
-THEME = 'theme'
+THEME = "theme"
 DEFAULT_LANG = u'en'
 RELATIVE_URLS = True  # disable in public version
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
+PLUGINS = ['minify'] # keep 'minify' plugin as the last element in the list to minify all output HTMLs
 
 DEFAULT_PAGINATION = 10 # Turns on the pagination
 PAGINATION_PATTERNS = (
@@ -40,11 +44,14 @@ DISPLAY_SIDEBAR = True
 DISPLAY_ARCHIVES_ON_SIDEBAR = True
 DISPLAY_CATEGORIES_ON_SIDEBAR = True
 DISPLAY_TAGS_ON_SIDEBAR = True
+DISPLAY_PAGES_ON_SIDEBAR = False
 DISPLAY_AUTHORS_ON_SIDEBAR = False # It's turned off because I'm the only one author on this site
 DISPLAY_SUBSCRIBES_ON_SIDEBAR = True
 DISPLAY_SITE_ON_SIDEBAR = True
 DISPLAY_LINKS_ON_SIDEBAR = False # Links are set in the LINKS variable below
 
+#MENUITEMS = [("Github", "https://github.com/vorakl"), ("LinkedIn", "https://linkedin.com/in/vorakl/")]
+#LINKS = [("Github", "https://github.com/vorakl"), ("LinkedIn", "https://linkedin.com/in/vorakl/")]
 DISPLAY_AUTHOR = False # Add an author in a article's metadata
 
 CATEGORIES_DESCRIPTION = {
@@ -61,7 +68,7 @@ TAGS_DESCRIPTION = {
 FEED_EMAIL = None # disable in development version
 FEED_DOMAIN = '' # and create all feed under the local domain for testing purpose
 FEED_MAX_ITEMS = 15
-FEED_ALL_ATOM = 'sitefeed/atom'
+FEED_ALL_ATOM = 'voraklfeed/atom'
 FEED_ALL_RSS = None # Here is used the only one feed on Google's feedburner. All other feeds are disabled
 CATEGORY_FEED_ATOM = None
 CATEGORY_FEED_RSS = None
@@ -79,7 +86,7 @@ STATIC_PATHS = [
     'images', 
     'files', 
     'static/robots.txt', 
-    'static/favicon.ico' 
+    'static/favicon.ico'
     ]
 # and sprecial output paths for them
 EXTRA_PATH_METADATA = {
@@ -129,6 +136,8 @@ TAGS_SAVE_AS = 'tag/index.html' # defines where to save a tags page, it's activa
 TAGS_URL = 'tag/'
 CATEGORIES_URL = 'category/' # defines where to save a categories page, it's activated by DIRECT_TEMPLATES
 CATEGORIES_SAVE_AS = 'category/index.html'
+PAGES_SAVE_AS = 'pages/index.html' # defines where to save a list of all pages, it's activated by TEMPLATE_PAGES
+PAGES_URL = 'pages/'
 
 YEAR_ARCHIVE_SAVE_AS = 'archives/{date:%Y}/index.html' # activates rendering an archive page per year/month/day
 MONTH_ARCHIVE_SAVE_AS = 'archives/{date:%Y}/{date:%m}/index.html'
@@ -139,5 +148,6 @@ DAY_ARCHIVE_SAVE_AS = ''
 # a hash array with an extra list of 'templates+output_filename' for rendering besides of blog posts
 # The output filename is needed because they don't have *_SAVE_AS variables
 TEMPLATE_PAGES = {'sitemap.html': 'sitemap.xml',
-                  'start.html': 'index.html'} 
+                  'start.html': 'index.html',
+                  'pages.html': PAGES_SAVE_AS} 
 

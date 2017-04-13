@@ -8,11 +8,13 @@ It's based on the [tuxlite_tbs](https://github.com/getpelican/pelican-themes/tre
 
 * Most of interface blocks such as a menu and a side bar, including their elements, can be turned on and off
 * An archives index with links to years and months
-* Lists of categories and tags with descriptions
+* Lists of categories, tags and pages with an elements' description as separate pages
 * Configurable start page
 * A paginator for the unlimited number of pages
-* It's configured to hiding all html files in the end of links. All URLs end with a slash
-* A correct year's part of the copyright  string accordingly to dates of a first and a last articles
+* It's configured to hiding all html files in the end of links. All URLs end with a slash.
+* Any sub-directories along the path of URLs are accessable
+* A correct year's part of a copyright string accordingly to dates of a first and a last articles
+* Versioning of static assets from the config files including other useful for SEO `meta` parameters 
 * Bonus: a simplified version of a Makefile for bundling CSS and JS files, render a site, check it on the local Nginx which is running from the official docker image (installed Docker is required) and publish it to the GitHub Pages
 
 ## Installation
