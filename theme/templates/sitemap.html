@@ -31,6 +31,12 @@
     <changefreq>daily</changefreq>
   </url>
 
+  <url>
+    <loc>{{ SITEURL }}/pages/</loc>                                                                                                     
+    <priority>1</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  
 {% for article in articles %}
   <url>
     <loc>{{ SITEURL }}/{{ article.url }}</loc>
