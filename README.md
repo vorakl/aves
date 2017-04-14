@@ -1,11 +1,14 @@
 # Aves 
 
+* [About](#about)
 * [Features](#features)
 * [Installation](#installation)
 * [Examples](#examples)
 * [A few words about index.html](#indexhtml)
 * [A recommended minimum of variables and required values](#a-recommended-minimum-of-variables-and-required-values)
 
+
+## About
 
 A theme for [Pelican](https://github.com/getpelican/pelican) (a static site generator).
 
