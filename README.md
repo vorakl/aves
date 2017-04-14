@@ -1,5 +1,12 @@
 # Aves 
 
+* [Features](#features)
+* [Installation](#installation)
+* [Examples](#examples)
+* [A few words about index.html](#indexhtml)
+* [A recommended minimum of variables and required values](#a-recommended-minimum-of-variables-and-required-values)
+
+
 A theme for [Pelican](https://github.com/getpelican/pelican) (a static site generator).
 
 It's based on the [tuxlite_tbs](https://github.com/getpelican/pelican-themes/tree/master/tuxlite_tbs) theme but was significantly rewritten and extended by new features and customization.
@@ -19,7 +26,7 @@ It's based on the [tuxlite_tbs](https://github.com/getpelican/pelican-themes/tre
 
 ## Installation
 
-The installation process is fairly trivial. Just clone this repository and set a path to the theme's directory in the `THEME` variable of `pelicanconf.py`. This theme relies on a bunch of variables which are set in specific values. So, in addition, you need to adjust a configuration of your site accordingly to provided example files `pelicanconf.py.example` and `publishconf.py.example`.
+The installation process is fairly trivial. Just clone this repository and set a path to the `theme` directory in the `THEME` variable of `pelicanconf.py`. This theme relies on a bunch of variables which are set in specific values. So, in addition, you need to adjust a configuration of your site accordingly to provided example files `pelicanconf.py.example` and `publishconf.py.example`.
 
 ## Examples
 
