@@ -40,6 +40,8 @@ This theme brings new settings which are more suitable for using in `pelicanconf
 * `SITEDESC`, a site's description
 * `CONTACT_URL`, a link to contacs of an owner of a site
 * `START_URL`,  a start point of a site (like 'news/' or 'pages/about/')
+* `SITE_VERSION`, a version for static assets, e.g. js, css, ico
+* `SITE_KEYWORDS`, a list of key words which appear in the html header
 * `DISPLAY_MENU`, all `DISPLAY_*` are self-explained and do what is expected
 * `DISPLAY_ITEMS_ON_MENU`
 * `DISPLAY_SIDEBAR`
@@ -54,6 +56,8 @@ This theme brings new settings which are more suitable for using in `pelicanconf
 * `CATEGORIES_DESCRIPTION`, a list with categories and their short description. It's used in the list of categories
 * `TAGS_DESCRIPTION`, a list with tags and their short description. It's used in the list of tags
 * `FEED_EMAIL`, a link to e-mail subscription if it exists
+* `PAGES_SAVE_AS`, defines where to save a list of all pages
+* `PAGES_URL`, how to get a list of all pages
 
 These existing variables should be present for a proper rendering (please, check appropriate values in example files):
 
