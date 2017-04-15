@@ -24,7 +24,7 @@
         <!-- <li class="divider-vertical"></li> -->
         {% if DISPLAY_PAGES_ON_MENU|default("true") %}
             {% for page in pages %}
-                <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+                <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.slug }}</a></li>
             {% endfor %}
         {% endif %}
     </ul>

@@ -14,7 +14,7 @@
         <tbody>
             {% for page in pages|sort %}
                 <tr>
-                    <td class="span3"><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></td>
+                    <td class="span3"><a href="{{ SITEURL }}/{{ page.url }}">{{ page.slug }}</a></td>
                     <td class="span9">{{ page.summary|striptags }}</td>
                 </tr>
             {% endfor %}
