@@ -15,11 +15,15 @@
 
     <link rel="stylesheet" href="{{ SITEURL }}/theme/bootstrap-pygments.bundle.min.css?v={{ SITE_VERSION }}">
     {% if FEED_ALL_ATOM %}
-        <link rel="alternate" type="application/atom+xml" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" title="{{ SITENAME }}">
+    <link rel="alternate" type="application/atom+xml" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" title="{{ SITENAME }}">
     {% endif %}
 
-    <!-- favicons -->
+    {% if FAVICON_TEMPLATE %}
+        {% include FAVICON_TEMPLATE %}
+    {% else %}
     <link rel="shortcut icon" href="/favicon.ico?v={{ SITE_VERSION }}">
+    {% endif %}
+
     <meta name="apple-mobile-web-app-title" content="{{ SITENAME }}">
     <meta name="application-name" content="{{ SITENAME }}">
 </head>
