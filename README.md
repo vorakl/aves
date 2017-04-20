@@ -39,7 +39,7 @@ The example of a site's configuration with articles, pages, sitemap, robots.txt,
 Another examples of using this theme in live are
 
 * [my blog](http://vorakl.name/)
-* [project's page](http://faketpl.vorakl.name/)
+* [faketpl's page](http://faketpl.vorakl.name/) ([src](https://github.com/vorakl/FakeTpl/tree/master/src.docs))
 
 
 ## index.html
