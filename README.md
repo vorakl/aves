@@ -25,6 +25,7 @@ It's based on the [tuxlite_tbs](https://github.com/getpelican/pelican-themes/tre
 * Any sub-directories along the path of URLs are accessable
 * A correct year's part of a copyright string accordingly to dates of a first and a last articles
 * Versioning of static assets from the config files including other useful for SEO `meta` parameters 
+* Configurable header tags for SEO and a separate template for favicons
 * Bonus: a simplified version of a Makefile for bundling CSS and JS files, render a site, check it on the local Nginx which is running from the official docker image (installed Docker is required) and publish it to the GitHub Pages
 
 ## Installation
@@ -35,7 +36,11 @@ The installation process is fairly trivial. Just clone this repository and set a
 
 The example of a site's configuration with articles, pages, sitemap, robots.txt, favicon.ico, etc which is assumed to be used in GitHub Pages is presented at the separate branch [example](https://github.com/vorakl/aves/tree/example).
 
-Another example of using this theme in live is [my site](http://vorakl.name/).
+Another examples of using this theme in live are
+
+* [my blog](http://vorakl.name/)
+* [project's page](http://faketpl.vorakl.name/)
+
 
 ## index.html
 
