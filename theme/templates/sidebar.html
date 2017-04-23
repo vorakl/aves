@@ -9,16 +9,16 @@
         <li><a href="{{ SITEURL }}/{{ ARCHIVES_URL }}"><img class="iconmenu" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAn1BMVEVHcEzuQyFDqUP/dlSpu8z////d7v+pqanuQyHMIQCH7oeampqFhYVUu1S7dmWpqallmMz3XTv1WTfu7u6YzP/MzMzdMhDVh392dnbbMA7vRiTTe2/YLQvVKgjSaVnp9P/kORfk8f/RJgR3qt7u9v/QVD/g7/9votbOIwHWKwnz+f9/suXNLQ5pnNDPPyXMIQD4/P+Guu38/v+UyPuOwvXUfcTEAAAACnRSTlMA////////gL+/p4E1rgAAAJNJREFUeAFNygMOxAAUhOF6rdq2df+z7dT9i0m+PAJdPpfToIfw2Add9af05H8/HqNfAS79Vt80msYFZKTIfsm1DNCkvmVqsqyZlp82AJE9JQKGnqKoF15MPwDGlrrfX/NLtSOgy5m9vAMUIcOy6xsWgMA5LpwAkHjHhZcAqvi4iCvAlzv1BdzKOrINRTHsqC5vxB8wAwzldAteLAAAAABJRU5ErkJggg==" alt="[archives]"/>Archives</a></li>
         {% endif %}
 
+        {% if DISPLAY_PAGES_ON_SIDEBAR|default("true") %}
+        <li><a href="{{ SITEURL }}/{{ PAGES_URL }}"><img class="iconmenu" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABLElEQVR4AY2Sg3LoQBiF77Nd6zFq27Zt27Zt27ZtnebU7U46ycxJsvt/+83qyy+D/w+J6EF9wgCQPQZUzgAtS0DP2mP4L9VB7mNefsK6bvHZQ4Gq9JIVBLdf4fYOsqEAECUvPwEt57i+hWzsi9c4+CWCwLfxBJc3UBSygsCz9gBnV8C3zG/gt2d2D+0Tm6gfWER5xyTyGwaRWd0D1sgKAtfKHRxfQlHICgLH0g0cnIMz4Fd2BqyRFQQ2BcvYOYOikBUEFtnz2DwBZ8Cv7AxYIysITNKnsXYMRSErCAySx7F8CM6AX9kZsEZWEOgmjGDxAIpCVhBoxQ5ifh+cAb+yM2CNrCBQj+qDNEZRyAoC6X7X68UNwDpjDF4lMwivXUJiyxoY/rOPNTJkn8fdA17l2BuZn2c5AAAAAElFTkSuQmCC" alt="[pages]" />Pages</a></li>
+        {% endif %}
+
         {% if DISPLAY_CATEGORIES_ON_SIDEBAR|default("true") %}
         <li><a href="{{ SITEURL }}/{{ CATEGORIES_URL }}"><img class="iconmenu" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAflBMVEVHcEzMmGXKlmPy0bL/5czHk2Dvzqz84cfHk2DEkF353MDAjFn11re7h1Twzq7jvJe3g1Drx6Peto7Jm2+yf0zy0rLlv5jClWjgt42uekepdkPbsIOkcT7Wp3qgbTrSoXGdajfPnGqaZzSYZTKbaDWeaziibzyndEGreEWwfEnOm7M9AAAAJHRSTlMA/////////7///////////////////////////////////7/uB1ikAAAAW0lEQVR4AYXNpQEDURBF0fs+6pAP9F9TfLCCZeY9angEopDREEaCLEvbglc90YxY58RQ5sxKQSkVOas6z6hE56jYQCV19k/pSPvFXva/7BaeDN30UOXNJaswlQOK2Bmf70dgXAAAAABJRU5ErkJggg==" alt="[categories]" />Categories</a></li>
         {% endif %}
 
         {% if DISPLAY_TAGS_ON_SIDEBAR|default("true") %}
         <li><a href="{{ SITEURL }}/{{ TAGS_URL }}"><img class="iconmenu" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABaUlEQVR4AY2TA7IeQRRGexMpZxnZQryM2LZt27Zt27Ztc3TyTvymfk3Vufi+W6PuDtNOsbcKcuyt065hqIQw5URK/nr8IUO9ohtMPBqRZrDh1BMaTzuF2f7huwy9sjcYd+grcQpmhT+93Hub/tWLEUbv/8S3BA7ejbA224vcfp2gXvQGw3e/23vjZczniGowLSDW+lVzFLyBYfD2V1x9FvHhG0g0MZDtaYBYq+k7V/AG0n/zMy4++c6bL/BxVCDZ1QBONTbbq+vjXMEbSK91Dzn76BsvPsOLgYFobS3YXcdsr66PcwVvIN1W3uXk/a88/Qj3ewS+zqoBS2ua7dX1ca7gDaTT0pscu/uFR+/hWvvA5zH+0F/ZXl3fuaLr227hVQ7f/sz9d3C+RfA/iLWaHs44XJTW8y5x8OYn7r71fwaxVkMv9wmFaTH7PPtufOT2G8QatcI/sQhNZ5xh3/WPgnV+GSvCgyZ5/QeQVjev4io8YwAAAABJRU5ErkJggg==" alt="[tags]" />Tags</a></li>
-        {% endif %}
-
-        {% if DISPLAY_PAGES_ON_SIDEBAR|default("true") %}
-        <li><a href="{{ SITEURL }}/{{ PAGES_URL }}"><img class="iconmenu" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABLElEQVR4AY2Sg3LoQBiF77Nd6zFq27Zt27Zt27ZtnebU7U46ycxJsvt/+83qyy+D/w+J6EF9wgCQPQZUzgAtS0DP2mP4L9VB7mNefsK6bvHZQ4Gq9JIVBLdf4fYOsqEAECUvPwEt57i+hWzsi9c4+CWCwLfxBJc3UBSygsCz9gBnV8C3zG/gt2d2D+0Tm6gfWER5xyTyGwaRWd0D1sgKAtfKHRxfQlHICgLH0g0cnIMz4Fd2BqyRFQQ2BcvYOYOikBUEFtnz2DwBZ8Cv7AxYIysITNKnsXYMRSErCAySx7F8CM6AX9kZsEZWEOgmjGDxAIpCVhBoxQ5ifh+cAb+yM2CNrCBQj+qDNEZRyAoC6X7X68UNwDpjDF4lMwivXUJiyxoY/rOPNTJkn8fdA17l2BuZn2c5AAAAAElFTkSuQmCC" alt="[pages]" />Pages</a></li>
         {% endif %}
 
         {% if DISPLAY_AUTHORS_ON_SIDEBAR|default("true") %}
@@ -38,7 +38,7 @@
 {% endif %}
 
 {% if DISPLAY_LINKS_ON_SIDEBAR|default("true") %}
-    {% if categories %}
+    {% if LINKS %}
     <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
     <ul class="nav nav-list">
         <li class="nav-header"> 
@@ -47,6 +47,22 @@
         
         {% for title, link in LINKS %}
         <li><a href="{{ link }}">{{ title }}</a></li>
+        {% endfor %}                   
+    </ul>
+    </div>
+    {% endif %}
+{% endif %}
+
+{% if DISPLAY_PAGES_ON_SIDEBAR|default("true") %}
+    {% if pages %}
+    <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+    <ul class="nav nav-list">
+        <li class="nav-header"> 
+        Pages
+        </li>
+        
+        {% for page in pages %}
+        <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.slug }}</a></li>
         {% endfor %}                   
     </ul>
     </div>

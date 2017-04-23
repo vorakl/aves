@@ -19,6 +19,7 @@ It's based on the [tuxlite_tbs](https://github.com/getpelican/pelican-themes/tre
 * Most of interface blocks such as a menu and a side bar, including their elements, can be turned on and off
 * An archives index with links to years and months
 * Lists of categories, tags and pages with an elements' description as separate pages
+* Lists of pages on a side bar 
 * Configurable start page
 * A paginator for the unlimited number of pages
 * It's configured to hiding all html files in the end of links. All URLs end with a slash.
