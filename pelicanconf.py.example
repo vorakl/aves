@@ -20,7 +20,8 @@ THEME = "theme"
 DEFAULT_LANG = u'en'
 RELATIVE_URLS = True  # disable in public version
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
-#PLUGINS = ['minify'] # keep 'minify' plugin as the last element in the list to minify all output HTMLs
+#PLUGIN_PATHS = []
+#PLUGINS = ['pelican_youtube', 'minify'] # keep 'minify' plugin as the last element in the list to minify all output HTMLs
 
 #EXTRA_TEMPLATES_PATHS = ['/path/to/theme.local']
 #FAVICON_TEMPLATE = "favicon.html" # you can add additional template for favicon's configuration
