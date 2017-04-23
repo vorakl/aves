@@ -12,7 +12,7 @@
 <div class="article">
     <table class="table">
         <tbody>
-        {% for category, articles in categories|sort %}
+        {% for category, articles in categories %}
                 <tr>
                     <td class="span3"><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></td>
                     <td class="span9">{{ CATEGORIES_DESCRIPTION[category] if category in CATEGORIES_DESCRIPTION|list else '' }}</td>

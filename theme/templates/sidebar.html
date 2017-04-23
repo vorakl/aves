@@ -77,7 +77,7 @@
         Tags
         </li>
         
-        {% for tag, null in tags|sort %}
+        {% for tag, null in tags %}
         <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
         {% endfor %}                   
     </ul>

@@ -25,7 +25,7 @@
 {% endmacro %}
 
 {% macro get_uniq_short_months(year) %}
-{% set short_month_list = get_short_months(year)|list|sort %}
+{% set short_month_list = get_short_months(year)|list %}
 {% for m in short_month_list %}
 {% if loop.first -%}
 {{ m }}

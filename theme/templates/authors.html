@@ -11,7 +11,7 @@
 {% block content %}
 <div class="article">
     <ul>
-        {% for author, articles in authors|sort %}
+        {% for author, articles in authors %}
             <li><a href="{{ SITEURL }}/{{ author.url }}">{{ author }} ({{ articles|count }})</a></li>
         {% endfor %}
     </ul>
