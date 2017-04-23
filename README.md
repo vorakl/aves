@@ -10,7 +10,7 @@
 
 ## About
 
-A theme for [Pelican](https://github.com/getpelican/pelican) (a static site generator).
+A theme for the [Pelican](https://github.com/getpelican/pelican) (a static site generator).
 
 It's based on the [tuxlite_tbs](https://github.com/getpelican/pelican-themes/tree/master/tuxlite_tbs) theme but was significantly rewritten and extended by new features and customization.
 
