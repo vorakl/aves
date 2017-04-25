@@ -1,5 +1,6 @@
-Aves 
-####
+
+A theme for the Pelican (a static site generator) 
+#################################################
 
 :slug: info
 :summary: A theme for the Pelican (a static site generator)
