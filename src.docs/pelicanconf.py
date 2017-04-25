@@ -54,6 +54,7 @@ DISPLAY_SITE_ON_SIDEBAR = False
 DISPLAY_LINKS_ON_SIDEBAR = False # Links are set in the LINKS variable below
 
 MENUITEMS = [
+    ("download", "https://github.com/vorakl/aves/archive/master.zip"),
     ("repo", "https://github.com/vorakl/aves"),
     ("blog", "http://vorakl.name/"),
     ("author", "http://vorakl.name/pages/about/"),
@@ -85,13 +86,15 @@ TAG_FEED_RSS = None
 #################################
 
 STATIC_PATHS = [
-    'static/robots.txt', 
-    'static/favicon.ico'
+    'static/robots.txt',
+    'static/google747986e3861ca881.html',
+    'static/favicon.ico',
     ]
 # and sprecial output paths for them
 EXTRA_PATH_METADATA = {
     'static/robots.txt': {'path': 'robots.txt'},
-    'static/favicon.ico': {'path': 'favicon.ico'}
+    'static/google747986e3861ca881.html': {'path': 'google747986e3861ca881.html'},
+    'static/favicon.ico': {'path': 'favicon.ico'},
     }
 
 
