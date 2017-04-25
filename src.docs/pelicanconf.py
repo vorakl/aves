@@ -7,7 +7,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Oleksii Tsvietnov'
 SITENAME = u"Aves"
-SITEURL = 'http://vorakl.name'
+SITEURL = 'http://aves.vorakl.name'
 SITEDESC = u'A theme for Pelican (a static site generator)'
 SITE_VERSION = '1493160753'
 SITE_KEYWORDS = 'aves,pelican,pelican theme,aves them,static site generator'
