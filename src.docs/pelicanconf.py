@@ -6,21 +6,21 @@ from __future__ import unicode_literals
 ########################
 
 AUTHOR = u'Oleksii Tsvietnov'
-SITENAME = u"Vorakl's notes"
+SITENAME = u"Aves"
 SITEURL = 'http://vorakl.name'
-SITEDESC = u'A technical blog about Software Engineering'
-SITE_VERSION = '1492036226'
-SITE_KEYWORDS = 'vorakl,Oleksii Tsvietnov,blog,software engineer'
+SITEDESC = u'A theme for Pelican (a static site generator)'
+SITE_VERSION = '1493160753'
+SITE_KEYWORDS = 'aves,pelican,pelican theme,aves them,static site generator'
 ARTICLE_PATHS = ['articles'] # a place for articles under the content location
 PAGE_PATHS = ['pages']
-CONTACT_URL = SITEURL + '/pages/about/'
-START_URL = 'news/' # What's a start point of a site (like 'news/' or 'pages/about/')?
+CONTACT_URL = 'http://vorakl.name/pages/about/'
+START_URL = 'pages/info/' # What's a start point of a site (like 'news/' or 'pages/about/')?
 TIMEZONE = 'Europe/Berlin'
 DEFAULT_LANG = u'en'
 RELATIVE_URLS = True  # disable in public version
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
-#PLUGIN_PATHS = ['/plugins']
-#PLUGINS = ['post_stats', 'pelican_youtube', 'minify'] # keep 'minify' plugin as the last element in the list to minify all output HTMLs
+PLUGIN_PATHS = ['/plugins']
+PLUGINS = ['minify'] # keep 'minify' plugin as the last element in the list to minify all output HTMLs
 
 #EXTRA_TEMPLATES_PATHS = ['/path/to/theme.local']
 #FAVICON_TEMPLATE = "favicon.html" # you can add additional template for favicon's configuration
@@ -32,38 +32,37 @@ PAGINATION_PATTERNS = (
 )
 
 DELETE_OUTPUT_DIRECTORY = True  # build an output dir from scratch every time
-OUTPUT_RETENTION = [".git", "CNAME", "README.md"] # but these dirs and files should be kept
+OUTPUT_RETENTION = ["CNAME"] # but these dirs and files should be kept
 
 
 ### Interface configuration
 ############################
 
 DISPLAY_MENU = True
-DISPLAY_PAGES_ON_MENU = True
+DISPLAY_PAGES_ON_MENU = False
 DISPLAY_CATEGORIES_ON_MENU = False
-DISPLAY_ITEMS_ON_MENU = False # Items are set in the MENUITEMS variable below
+DISPLAY_ITEMS_ON_MENU = True # Items are set in the MENUITEMS variable below
 
-DISPLAY_SIDEBAR = True
-DISPLAY_ARCHIVES_ON_SIDEBAR = True # It also turns on/off an appropriate section in a sitemap.xml
-DISPLAY_CATEGORIES_ON_SIDEBAR = True # It also turns on/off an appropriate section in a sitemap.xml
-DISPLAY_TAGS_ON_SIDEBAR = True # It also turns on/off an appropriate section in a sitemap.xml
-DISPLAY_PAGES_ON_SIDEBAR = False # It also turns on/off an appropriate section in a sitemap.xml
+DISPLAY_SIDEBAR = False
+DISPLAY_ARCHIVES_ON_SIDEBAR = False # It also turns on/off an appropriate section in a sitemap.xml
+DISPLAY_CATEGORIES_ON_SIDEBAR = False # It also turns on/off an appropriate section in a sitemap.xml
+DISPLAY_TAGS_ON_SIDEBAR = False # It also turns on/off an appropriate section in a sitemap.xml
+DISPLAY_PAGES_ON_SIDEBAR = True # It also turns on/off an appropriate section in a sitemap.xml
 DISPLAY_AUTHORS_ON_SIDEBAR = False # It's turned off because I'm the only one author on this site
-DISPLAY_SUBSCRIBES_ON_SIDEBAR = True
-DISPLAY_SITE_ON_SIDEBAR = True
+DISPLAY_SUBSCRIBES_ON_SIDEBAR = False
+DISPLAY_SITE_ON_SIDEBAR = False
 DISPLAY_LINKS_ON_SIDEBAR = False # Links are set in the LINKS variable below
 
-#MENUITEMS = [("Github", "https://github.com/vorakl"), ("LinkedIn", "https://linkedin.com/in/vorakl/")]
+MENUITEMS = [
+    ("repo", "https://github.com/vorakl/aves"),
+    ("blog", "http://vorakl.name/"),
+    ("author", "http://vorakl.name/pages/about/"),
+    ]
 #LINKS = [("Github", "https://github.com/vorakl"), ("LinkedIn", "https://linkedin.com/in/vorakl/")]
 DISPLAY_AUTHOR = False # Add an author in a article's metadata
 
-CATEGORIES_DESCRIPTION = {
-        "article": "A full story about some specific topic",
-        "howto": "A practical guide how to make something"
-        }
-TAGS_DESCRIPTION = {
-        "misc": "Miscellaneous information"
-        }
+CATEGORIES_DESCRIPTION = {}
+TAGS_DESCRIPTION = {}
 
 ### Feed's specification 
 #########################
@@ -71,7 +70,7 @@ TAGS_DESCRIPTION = {
 FEED_EMAIL = None # disable in development version
 FEED_DOMAIN = '' # and create all feed under the local domain for testing purpose
 FEED_MAX_ITEMS = 15
-FEED_ALL_ATOM = 'voraklfeed/atom'
+FEED_ALL_ATOM = ''
 FEED_ALL_RSS = None # Here is used the only one feed on Google's feedburner. All other feeds are disabled
 CATEGORY_FEED_ATOM = None
 CATEGORY_FEED_RSS = None
@@ -86,8 +85,6 @@ TAG_FEED_RSS = None
 #################################
 
 STATIC_PATHS = [
-    'images', 
-    'files', 
     'static/robots.txt', 
     'static/favicon.ico'
     ]
@@ -104,31 +101,31 @@ EXTRA_PATH_METADATA = {
 # blog posts related pages
 
 # If there is a 'Save_as' metadata (like in 404.html), then a page will be rendered anyway
-ARTICLE_SAVE_AS = '{category}/{slug}/index.html' # activates rendering each article
+ARTICLE_SAVE_AS = '' # activates rendering each article
 ARTICLE_URL = '{category}/{slug}/'
 ARTICLE_LANG_SAVE_AS = '{category}/{slug}-{lang}/index.html'
 ARTICLE_LANG_URL = '{category}/{slug}-{lang}/'
-DRAFT_SAVE_AS = 'drafts/{category}/{slug}/index.html' # activates rendering each article's draft
+DRAFT_SAVE_AS = '' # activates rendering each article's draft
 DRAFT_URL = 'drafts/{category}/{slug}/'
-DRAFT_LANG_SAVE_AS = 'drafts/{category}/{slug}-{lang}/index.html'
+DRAFT_LANG_SAVE_AS = ''
 DRAFT_LANG_URL = 'drafts/{category}/{slug}-{lang}/'
 PAGE_SAVE_AS = 'pages/{slug}/index.html'  # activates rendering each page.
 PAGE_URL = 'pages/{slug}/'
 PAGE_LANG_SAVE_AS = 'pages/{slug}-{lang}/index.html'
 PAGE_LANG_URL = 'pages/{slug}-{lang}/'
-CATEGORY_SAVE_AS = 'category/{slug}/index.html' # activates rendering each category
+CATEGORY_SAVE_AS = '' # activates rendering each category
 CATEGORY_URL = 'category/{slug}/'
-TAG_SAVE_AS = 'tag/{slug}/index.html' # activates rendering each tag
+TAG_SAVE_AS = '' # activates rendering each tag
 TAG_URL = 'tag/{slug}/'
-AUTHOR_SAVE_AS = 'author/{slug}/index.html' # activates rendering each author
+AUTHOR_SAVE_AS = '' # activates rendering each author
 AUTHOR_URL = 'author/{slug}/'
 
 # site related pages
 
 # a list of templates for rendering blog posts. Not all of them, just an index and groups of entities (tags, categories, ...)
 # other templates for blog posts rendering (for a tag, a category, ...) are activated by *_SAVE_AS variables below
-DIRECT_TEMPLATES = ['index', 'categories', 'tags', 'authors', 'archives']
-PAGINATED_DIRECT_TEMPLATES = ['index']
+DIRECT_TEMPLATES = []
+PAGINATED_DIRECT_TEMPLATES = []
 
 INDEX_SAVE_AS = 'news/index.html'
 AUTHORS_SAVE_AS = 'author/index.html'  # defines where to save an authors page, it's activated by DIRECT_TEMPLATES 
@@ -141,6 +138,7 @@ CATEGORIES_URL = 'category/' # defines where to save a categories page, it's act
 CATEGORIES_SAVE_AS = 'category/index.html'
 PAGES_SAVE_AS = 'pages/index.html' # defines where to save a list of all pages, it's activated by TEMPLATE_PAGES
 PAGES_URL = 'pages/'
+
 
 YEAR_ARCHIVE_SAVE_AS = 'archives/{date:%Y}/index.html' # activates rendering an archive page per year/month/day
 MONTH_ARCHIVE_SAVE_AS = 'archives/{date:%Y}/{date:%m}/index.html'

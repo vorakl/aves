@@ -6,8 +6,8 @@ BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=$(shell readlink -f ../docs)
 STATICDIR=$(BASEDIR)/theme/static
-THEMEDIR=/path/to/theme
-PLUGINSDIR=/path/to/pelican-plugins
+THEMEDIR=/home/vorakl/repos/my/github/aves/theme
+PLUGINSDIR=/home/vorakl/repos/others/pelican-plugins
 CONFFILE=pelicanconf.py
 PUBLISHCONF=publishconf.py
 
