@@ -37,7 +37,7 @@ help:
 	@echo '   make publish                    generate using production settings     '
 	@echo '   make bundle                     generate bundled version of CSS and JS '
 	@echo '   make serve [PORT=8000]          serve site at http://localhost:8000/   '
-	@echo '   make github                     upload the web site via gh-pages       '
+	@echo '   make github                     upload the web site to GitHub          '
 	@echo '                                                                          '
 	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html   '
 	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
