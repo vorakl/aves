@@ -31,7 +31,7 @@ Features
 * A compact paginator for the unlimited number of pages
 * Provided configuration hides all html files in the end of links. All URLs end with a slash (e.g. site/path/to/)
 * Any sub-directories along the path of URLs are accessable (e.g. site/tag/misc/ , site/tag/ , site/)
-* A correct year's part of a copyright string accordingly to dates of a first and a last articles
+* A correct year's part of a copyright string accordingly to dates of a first and a last articles (`How to Write a Copyright Notice`_)
 * Versioning of static assets from the config file 
 * Configurable header tags (``meta``) for SEO and a separate template for a favicon
 * Shows avarage time to read an article
@@ -150,4 +150,4 @@ These existing variables should be present for a proper rendering (please, check
 .. _example: https://github.com/vorakl/aves/tree/example
 .. _`my blog`: http://vorakl.name/
 .. _`faketpl's page`: http://faketpl.vorakl.name/
-
+.. _`How to Write a Copyright Notice`: https://www.plagiarismtoday.com/2011/11/08/how-to-write-a-copyright-notice/
