@@ -58,6 +58,7 @@
 
     <footer>
         <p class="p-footer">
+        {% block copyright_notice %}
             {% if articles %}
                {% set copy_date1 = articles[0].date.strftime('%Y') %}
                {% set copy_dateN = articles[-1].date.strftime('%Y') %}
@@ -66,6 +67,8 @@
                {% else %}
                     {% set copy_date = copy_dateN + '-' + copy_date1 %}
                {% endif %}
+            {% elif pages %}
+                {% set copy_date = pages|first|attr("date")|strftime('%Y') %}
             {% else %}
                {% set copy_date = '' %}
             {% endif %}
@@ -73,6 +76,7 @@
             <span class="pull-left">
                 &copy; {{ copy_date }} <a href="{{ CONTACT_URL|default("#") }}">{{ AUTHOR }}</a> All Rights Reserved
             </span>
+        {% endblock %}
             <span class="pull-right">
                 Powered by <a href="https://github.com/getpelican/pelican">Pelican</a> and <a href="https://github.com/vorakl/aves">Aves</a> theme
             </span>

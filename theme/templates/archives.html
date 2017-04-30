@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
-{% block title %}{{ SITENAME }} :: Archives{% endblock %}
+{% block title %}{{ SITENAME }} :: The archive of all articles{% endblock %}
 
 {% block content_title %}
 <div class="content-title">
-    <h1>Archives</h1>
+    <h1>The archive of all articles</h1>
 </div>
 {% endblock %}
 
@@ -42,9 +42,9 @@
 {% set short_uniq_month_list = get_uniq_short_months(year)|list %}
 {% for m in short_uniq_month_list %}
 {% if loop.first %}
-<a href="{{ SITEURL }}/archives/{{ year }}/{{ months_num_dict[m] }}/">{{ months_dict[m] }}</a>
+<a href="{{ SITEURL }}/articles/{{ year }}/{{ months_num_dict[m] }}/">{{ months_dict[m] }}</a>
 {% else %}
-<a href="{{ SITEURL }}/archives/{{ year }}/{{ months_num_dict[m] }}/">, {{ months_dict[m] }}</a>
+<a href="{{ SITEURL }}/articles/{{ year }}/{{ months_num_dict[m] }}/">, {{ months_dict[m] }}</a>
 {% endif %}
 {% endfor %}
 {% endmacro %}
@@ -53,14 +53,14 @@
             {% set cur_year = article.date|strftime("%Y") %}
             {% if loop.first %}
                 <tr>
-                    <td class="span3"><a href="{{ SITEURL }}/archives/{{ cur_year }}/">{{ cur_year }}</a></td>
+                    <td class="span3"><a href="{{ SITEURL }}/articles/{{ cur_year }}/">{{ cur_year }}</a></td>
                     <td class="span9">{{ get_uniq_months(cur_year) }}</td>
                 </tr>
             {% else %}
                 {% set prev_year = dates[loop.index0 - 1].date|strftime("%Y") %}
                 {% if cur_year != prev_year %}
                     <tr>
-                        <td class="span3"><a href="{{ SITEURL }}/archives/{{ cur_year }}/">{{ cur_year }}</a></td>
+                        <td class="span3"><a href="{{ SITEURL }}/articles/{{ cur_year }}/">{{ cur_year }}</a></td>
                         <td class="span9">{{ get_uniq_months(cur_year) }}</td>
                     </tr>
                 {% endif %}

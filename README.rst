@@ -25,21 +25,21 @@ Features
 
 * Most of interface blocks such as a menu and a side bar, including their elements, can be turned on and off
 * An archives index with links to years and months
-* Lists of categories, tags and pages with an elements' description as separate pages
+* Lists of categories, tags, authors and pages with an elements' description as separate pages
 * Lists of pages on a side bar 
 * Configurable start page (what page to show if access the site's root)
 * A compact paginator for the unlimited number of pages
 * Provided configuration hides all html files in the end of links. All URLs end with a slash (e.g. site/path/to/)
 * Any sub-directories along the path of URLs are accessable (e.g. site/tag/misc/ , site/tag/ , site/)
-* A correct year's part of a copyright string accordingly to dates of a first and a last articles (`How to Write a Copyright Notice`_)
+* A year in a copyright notice (`How to Write a Copyright Notice`_) is set dynamically and it depends on an entity: 
+    + on group pages (tags, articles) it's set to dates of a first and a last articles
+    + on a single page or article it's set to a creation date
 * Versioning of static assets from the config file 
 * Configurable header tags (``meta``) for SEO and a separate template for a favicon
 * Shows avarage time to read an article
 * Bonus:
-
     + a template of ``content`` directory and examples of configuration files for a tyical site
     + a simplified version of a Makefile (requires adjusting only a few path variables in a header) with a few features:
-
         - bundle CSS and JS files
         - build sites using dockerized Pelican
         - serve sites using dockerized Nginx
@@ -51,9 +51,9 @@ Installation
 
 The installation process is fairly trivial. Basically, you need only the `theme` directory from this repo. A path to it can be set in a few ways:
 
-    * in the ``THEMEDIR`` variable of the provided Makefile 
-    * in the ``-t /path/to/theme/`` command line option of ``pelican``
-    * in the ``THEME`` variable of ``pelicanconf.py``
+* in the ``THEMEDIR`` variable of the provided Makefile 
+* in the ``-t /path/to/theme/`` command line option of ``pelican``
+* in the ``THEME`` variable of ``pelicanconf.py``
 
 This theme relies on a bunch of variables which are set in specific values. So, in addition, you need to adjust a configuration of your site accordingly to provided example files ``pelicanconf.py.example`` and ``publishconf.py.example``.
 

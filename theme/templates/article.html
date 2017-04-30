@@ -12,3 +12,9 @@
         <div>{{ article.content }}</div>
     </div>
 {% endblock %}
+
+{% block copyright_notice %}
+    <span class="pull-left">
+        &copy; {{ article.date.strftime('%Y') }} <a href="{{ CONTACT_URL|default("#") }}">{{ AUTHOR }}</a> All Rights Reserved
+    </span>
+{% endblock %}

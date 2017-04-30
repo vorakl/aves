@@ -10,10 +10,15 @@
 
 {% block content %}
 <div class="article">
-    <ul>
+    <table class="table">
+        <tbody>
         {% for author, articles in authors %}
-            <li><a href="{{ SITEURL }}/{{ author.url }}">{{ author }} ({{ articles|count }})</a></li>
+                <tr>
+                    <td class="span3"><a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a></td>
+                    <td class="span9">{{ articles|count }} {{ 'article' if articles|count == 1 else 'articles' }}</td>
+                </tr>
         {% endfor %}
-    </ul>
+        </tbody>
+    </table>
 </div>
 {% endblock %}
