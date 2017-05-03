@@ -60,16 +60,16 @@ This theme relies on a bunch of variables which are set in specific values. So, 
 Examples
 ========
 
-The example of a site's configuration with articles, pages, sitemap, robots.txt, favicon.ico, etc which is assumed to be used in GitHub Pages is presented at the separate example__ branch.
+The example of a site's configuration with articles, pages, sitemap, robots.txt, favicon.ico, etc which is assumed to be used in GitHub Pages is presented at the `separate branch`__.
 
-__ https://github.com/vorakl/aves/tree/example 
+__ https://github.com/vorakl/aves/tree/example-site
 
 Another examples of using this theme in live are
 
 * `my blog`_ , as an example of using for blogging
-* `faketpl's page`_ (`src`__), as an example of a project's site
+* `TrivialRC's page`_ (`src`__), as an example of a project's site
 
-__ https://github.com/vorakl/FakeTpl/tree/master/src.docs
+__ https://github.com/vorakl/TrivialRC/tree/master/src.docs
 
 
 A few words about index.html
@@ -149,5 +149,5 @@ These existing variables should be present for a proper rendering (please, check
 .. _`tuxlite_tbs`: https://github.com/getpelican/pelican-themes/tree/master/tuxlite_tbs
 .. _example: https://github.com/vorakl/aves/tree/example
 .. _`my blog`: http://vorakl.name/
-.. _`faketpl's page`: http://faketpl.vorakl.name/
+.. _`TrivialRC's page`: http://trivialrc.vorakl.name/
 .. _`How to Write a Copyright Notice`: https://www.plagiarismtoday.com/2011/11/08/how-to-write-a-copyright-notice/
