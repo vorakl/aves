@@ -60,9 +60,9 @@ This theme relies on a bunch of variables which are set in specific values. So, 
 Examples
 ========
 
-The example of a site's configuration with articles, pages, sitemap, robots.txt, favicon.ico, etc which is assumed to be used in GitHub Pages is presented at the separate example__ branch.
+The example of a site's configuration with articles, pages, sitemap, robots.txt, favicon.ico, etc which is assumed to be used in GitHub Pages is presented at the `separate branch`__.
 
-__ https://github.com/vorakl/aves/tree/example 
+__ https://github.com/vorakl/aves/tree/example-site
 
 Another examples of using this theme in live are
 
