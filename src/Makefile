@@ -4,10 +4,10 @@ PELICANOPTS=
 
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
-OUTPUTDIR=$(shell readlink -f ../docs)
+OUTPUTDIR=$(shell readlink -f ../output)
 STATICDIR=$(BASEDIR)/theme/static
-THEMEDIR=/path/to/theme
-PLUGINSDIR=/path/to/pelican-plugins
+THEMEDIR=$(BASEDIR)/theme
+PLUGINSDIR=$(BASEDIR)/plugins
 CONFFILE=pelicanconf.py
 PUBLISHCONF=publishconf.py
 

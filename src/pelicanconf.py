@@ -5,12 +5,12 @@ from __future__ import unicode_literals
 ### Basic configuration
 ########################
 
-AUTHOR = u'Oleksii Tsvietnov'
-SITENAME = u"Vorakl's notes"
-SITEURL = 'http://vorakl.name'
-SITEDESC = u'A technical blog about Software Engineering'
-SITE_VERSION = '1492036226'
-SITE_KEYWORDS = 'vorakl,Oleksii Tsvietnov,blog,software engineer'
+AUTHOR = u'John Doe'
+SITENAME = u"The Corporate B.S."
+SITEURL = 'http://corporate.bs'
+SITEDESC = u'Seamlessly productivate orthogonal strategic theme areas'
+SITE_VERSION = '1493896421'
+SITE_KEYWORDS = 'e-commerce,architectures,catalysts for change,outsourcing,value'
 ARTICLE_PATHS = ['articles'] # a place for articles under the content location
 PAGE_PATHS = ['pages']
 CONTACT_URL = SITEURL + '/pages/about/'
@@ -20,10 +20,10 @@ DEFAULT_LANG = u'en'
 RELATIVE_URLS = True  # disable in public version
 DEFAULT_DATE = 'fs'
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
-#PLUGIN_PATHS = ['/plugins']
-#PLUGINS = ['post_stats', 'pelican_youtube', 'minify'] # keep 'minify' plugin as the last element in the list to minify all output HTMLs
+PLUGIN_PATHS = ['/plugins']
+PLUGINS = ['post_stats', 'pelican_youtube', 'minify'] # keep 'minify' plugin as the last element in the list to minify all output HTMLs
 
-#EXTRA_TEMPLATES_PATHS = ['/path/to/theme.local']
+#EXTRA_TEMPLATES_PATHS = ['/theme.local']
 #FAVICON_TEMPLATE = "favicon.html" # you can add additional template for favicon's configuration
 
 DEFAULT_PAGINATION = 10 # Turns on the pagination
@@ -33,7 +33,7 @@ PAGINATION_PATTERNS = (
 )
 
 DELETE_OUTPUT_DIRECTORY = True  # build an output dir from scratch every time
-OUTPUT_RETENTION = [".git", "CNAME", "README.md"] # but these dirs and files should be kept
+OUTPUT_RETENTION = [".git", "CNAME", "README.md", "favicon"] # but these dirs and files should be kept
 
 
 ### Interface configuration
@@ -42,21 +42,21 @@ OUTPUT_RETENTION = [".git", "CNAME", "README.md"] # but these dirs and files sho
 DISPLAY_MENU = True
 DISPLAY_PAGES_ON_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = False
-DISPLAY_ITEMS_ON_MENU = False # Items are set in the MENUITEMS variable below
+DISPLAY_ITEMS_ON_MENU = True # Items are set in the MENUITEMS variable below
 
 DISPLAY_SIDEBAR = True
 DISPLAY_ARCHIVES_ON_SIDEBAR = True # It also turns on/off an appropriate section in a sitemap.xml
 DISPLAY_CATEGORIES_ON_SIDEBAR = True # It also turns on/off an appropriate section in a sitemap.xml
 DISPLAY_TAGS_ON_SIDEBAR = True # It also turns on/off an appropriate section in a sitemap.xml
-DISPLAY_PAGES_ON_SIDEBAR = False # It also turns on/off an appropriate section in a sitemap.xml
-DISPLAY_AUTHORS_ON_SIDEBAR = False # It's turned off because I'm the only one author on this site
+DISPLAY_PAGES_ON_SIDEBAR = True # It also turns on/off an appropriate section in a sitemap.xml
+DISPLAY_AUTHORS_ON_SIDEBAR = True # It's turned off because I'm the only one author on this site
 DISPLAY_SUBSCRIBES_ON_SIDEBAR = True
 DISPLAY_SITE_ON_SIDEBAR = True
-DISPLAY_LINKS_ON_SIDEBAR = False # Links are set in the LINKS variable below
+DISPLAY_LINKS_ON_SIDEBAR = True # Links are set in the LINKS variable below
 
-#MENUITEMS = [("Github", "https://github.com/vorakl"), ("LinkedIn", "https://linkedin.com/in/vorakl/")]
-#LINKS = [("Github", "https://github.com/vorakl"), ("LinkedIn", "https://linkedin.com/in/vorakl/")]
-DISPLAY_AUTHOR = False # Add an author in a article's metadata
+MENUITEMS = [("GitHub", "https://github.com/"), ("LinkedIn", "https://linkedin.com/")]
+LINKS = [("Github", "https://github.com/"), ("LinkedIn", "https://linkedin.com/")]
+DISPLAY_AUTHOR = True # Add an author in a article's metadata
 
 CATEGORIES_DESCRIPTION = {
         "article": "A full story about some specific topic",
@@ -72,7 +72,7 @@ TAGS_DESCRIPTION = {
 FEED_EMAIL = None # disable in development version
 FEED_DOMAIN = '' # and create all feed under the local domain for testing purpose
 FEED_MAX_ITEMS = 15
-FEED_ALL_ATOM = 'voraklfeed/atom'
+FEED_ALL_ATOM = 'corporatebs/atom'
 FEED_ALL_RSS = None # Here is used the only one feed on Google's feedburner. All other feeds are disabled
 CATEGORY_FEED_ATOM = None
 CATEGORY_FEED_RSS = None
