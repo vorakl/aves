@@ -8,7 +8,7 @@ from __future__ import unicode_literals
 AUTHOR = u'John Doe'
 SITENAME = u"The Corporate B.S."
 SITEURL = 'http://corporate.bs'
-SITEDESC = u'Seamlessly productivate orthogonal strategic theme areas'
+SITEDESC = u'The resources think out of the box.'
 SITE_VERSION = '1493896421'
 SITE_KEYWORDS = 'e-commerce,architectures,catalysts for change,outsourcing,value'
 ARTICLE_PATHS = ['articles'] # a place for articles under the content location
@@ -21,7 +21,7 @@ RELATIVE_URLS = True  # disable in public version
 DEFAULT_DATE = 'fs'
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 PLUGIN_PATHS = ['/plugins']
-PLUGINS = ['post_stats', 'pelican_youtube', 'minify'] # keep 'minify' plugin as the last element in the list to minify all output HTMLs
+PLUGINS = ['minify'] # keep 'minify' plugin as the last element in the list to minify all output HTMLs
 
 #EXTRA_TEMPLATES_PATHS = ['/theme.local']
 #FAVICON_TEMPLATE = "favicon.html" # you can add additional template for favicon's configuration
@@ -105,24 +105,24 @@ EXTRA_PATH_METADATA = {
 # blog posts related pages
 
 # If there is a 'Save_as' metadata (like in 404.html), then a page will be rendered anyway
-ARTICLE_SAVE_AS = '{category}/{slug}/index.html' # activates rendering each article
-ARTICLE_URL = '{category}/{slug}/'
-ARTICLE_LANG_SAVE_AS = '{category}/{slug}-{lang}/index.html'
-ARTICLE_LANG_URL = '{category}/{slug}-{lang}/'
-DRAFT_SAVE_AS = 'drafts/{category}/{slug}/index.html' # activates rendering each article's draft
-DRAFT_URL = 'drafts/{category}/{slug}/'
-DRAFT_LANG_SAVE_AS = 'drafts/{category}/{slug}-{lang}/index.html'
-DRAFT_LANG_URL = 'drafts/{category}/{slug}-{lang}/'
+ARTICLE_SAVE_AS = 'articles/{slug}/index.html' # activates rendering each article
+ARTICLE_URL = 'articles/{slug}/'
+ARTICLE_LANG_SAVE_AS = 'articles/{slug}-{lang}/index.html'
+ARTICLE_LANG_URL = 'articles/{slug}-{lang}/'
+DRAFT_SAVE_AS = 'drafts/{slug}/index.html' # activates rendering each article's draft
+DRAFT_URL = 'drafts/{slug}/'
+DRAFT_LANG_SAVE_AS = 'drafts/{slug}-{lang}/index.html'
+DRAFT_LANG_URL = 'drafts/{slug}-{lang}/'
 PAGE_SAVE_AS = 'pages/{slug}/index.html'  # activates rendering each page.
 PAGE_URL = 'pages/{slug}/'
 PAGE_LANG_SAVE_AS = 'pages/{slug}-{lang}/index.html'
 PAGE_LANG_URL = 'pages/{slug}-{lang}/'
-CATEGORY_SAVE_AS = 'category/{slug}/index.html' # activates rendering each category
-CATEGORY_URL = 'category/{slug}/'
-TAG_SAVE_AS = 'tag/{slug}/index.html' # activates rendering each tag
-TAG_URL = 'tag/{slug}/'
-AUTHOR_SAVE_AS = 'author/{slug}/index.html' # activates rendering each author
-AUTHOR_URL = 'author/{slug}/'
+CATEGORY_SAVE_AS = 'categories/{slug}/index.html' # activates rendering each category
+CATEGORY_URL = 'categories/{slug}/'
+TAG_SAVE_AS = 'tags/{slug}/index.html' # activates rendering each tag
+TAG_URL = 'tags/{slug}/'
+AUTHOR_SAVE_AS = 'authors/{slug}/index.html' # activates rendering each author
+AUTHOR_URL = 'authors/{slug}/'
 
 # site related pages
 
@@ -132,19 +132,19 @@ DIRECT_TEMPLATES = ['index', 'categories', 'tags', 'authors', 'archives']
 PAGINATED_DIRECT_TEMPLATES = ['index']
 
 INDEX_SAVE_AS = 'news/index.html'
-AUTHORS_SAVE_AS = 'author/index.html'  # defines where to save an authors page, it's activated by DIRECT_TEMPLATES 
-AUTHORS_URL = 'author/'
-ARCHIVES_SAVE_AS = 'archives/index.html' # defines where to save an archives page, it's activated by DIRECT_TEMPLATES 
-ARCHIVES_URL = 'archives/'
-TAGS_SAVE_AS = 'tag/index.html' # defines where to save a tags page, it's activated by DIRECT_TEMPLATES
-TAGS_URL = 'tag/'
-CATEGORIES_URL = 'category/' # defines where to save a categories page, it's activated by DIRECT_TEMPLATES
-CATEGORIES_SAVE_AS = 'category/index.html'
+AUTHORS_SAVE_AS = 'authors/index.html'  # defines where to save an authors page, it's activated by DIRECT_TEMPLATES 
+AUTHORS_URL = 'authors/'
+ARCHIVES_SAVE_AS = 'articles/index.html' # defines where to save an archives page, it's activated by DIRECT_TEMPLATES 
+ARCHIVES_URL = 'articles/'
+TAGS_SAVE_AS = 'tags/index.html' # defines where to save a tags page, it's activated by DIRECT_TEMPLATES
+TAGS_URL = 'tags/'
+CATEGORIES_URL = 'categories/' # defines where to save a categories page, it's activated by DIRECT_TEMPLATES
+CATEGORIES_SAVE_AS = 'categories/index.html'
 PAGES_SAVE_AS = 'pages/index.html' # defines where to save a list of all pages, it's activated by TEMPLATE_PAGES
 PAGES_URL = 'pages/'
 
-YEAR_ARCHIVE_SAVE_AS = 'archives/{date:%Y}/index.html' # activates rendering an archive page per year/month/day
-MONTH_ARCHIVE_SAVE_AS = 'archives/{date:%Y}/{date:%m}/index.html'
+YEAR_ARCHIVE_SAVE_AS = 'articles/{date:%Y}/index.html' # activates rendering an archive page per year/month/day
+MONTH_ARCHIVE_SAVE_AS = 'articles/{date:%Y}/{date:%m}/index.html'
 DAY_ARCHIVE_SAVE_AS = ''
 
 # additional pages

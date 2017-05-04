@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /unknown/
 
-Sitemap: http://localhost/sitemap.xml
+Sitemap: http://corporate.bs/sitemap.xml
