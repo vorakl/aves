@@ -33,7 +33,7 @@ PAGINATION_PATTERNS = (
 )
 
 DELETE_OUTPUT_DIRECTORY = True  # build an output dir from scratch every time
-OUTPUT_RETENTION = [".git", "CNAME", "README.md", "favicon"] # but these dirs and files should be kept
+OUTPUT_RETENTION = [".git", "CNAME", "README.md"] # but these dirs and files should be kept
 
 
 ### Interface configuration
