@@ -26,7 +26,7 @@ PLUGINS = ['post_stats', 'minify'] # keep 'minify' plugin as the last element in
 #EXTRA_TEMPLATES_PATHS = ['/theme.local']
 #FAVICON_TEMPLATE = "favicon.html" # you can add additional template for favicon's configuration
 
-DEFAULT_PAGINATION = 2 # Turns on the pagination
+DEFAULT_PAGINATION = 3 # Turns on the pagination
 PAGINATION_PATTERNS = (
     (1, '{base_name}/', '{base_name}/index.html'),
     (2, '{base_name}/p{number}/', '{base_name}/p{number}/index.html'),
