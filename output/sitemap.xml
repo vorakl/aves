@@ -37,10 +37,6 @@
     <changefreq>weekly</changefreq>
 </url>
 <url>
-    <loc>./articles/metrics-ru/</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-</url><url>
     <loc>./articles/leadership/</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
