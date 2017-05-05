@@ -20,13 +20,13 @@ DEFAULT_LANG = u'en'
 RELATIVE_URLS = True  # disable in public version
 DEFAULT_DATE = 'fs'
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
-PLUGIN_PATHS = ['/plugins']
-PLUGINS = ['minify'] # keep 'minify' plugin as the last element in the list to minify all output HTMLs
+PLUGIN_PATHS = ['plugins']
+PLUGINS = ['post_stats', 'minify'] # keep 'minify' plugin as the last element in the list to minify all output HTMLs
 
 #EXTRA_TEMPLATES_PATHS = ['/theme.local']
 #FAVICON_TEMPLATE = "favicon.html" # you can add additional template for favicon's configuration
 
-DEFAULT_PAGINATION = 10 # Turns on the pagination
+DEFAULT_PAGINATION = 2 # Turns on the pagination
 PAGINATION_PATTERNS = (
     (1, '{base_name}/', '{base_name}/index.html'),
     (2, '{base_name}/p{number}/', '{base_name}/p{number}/index.html'),
@@ -72,7 +72,7 @@ TAGS_DESCRIPTION = {
 FEED_EMAIL = None # disable in development version
 FEED_DOMAIN = '' # and create all feed under the local domain for testing purpose
 FEED_MAX_ITEMS = 15
-FEED_ALL_ATOM = 'corporatebs/atom'
+FEED_ALL_ATOM = ''
 FEED_ALL_RSS = None # Here is used the only one feed on Google's feedburner. All other feeds are disabled
 CATEGORY_FEED_ATOM = None
 CATEGORY_FEED_RSS = None

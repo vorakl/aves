@@ -58,7 +58,7 @@ html:
 	                -F 'cd /site && pelican /input -o /output -t /theme -s $(CONFFILE) $(PELICANOPTS)'; \
 	else \
 		echo 'Building a local web-site using a local Pelican'; \
-		@$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(BASEDIR)/$(CONFFILE) $(PELICANOPTS); \
+		$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -t $(THEMEDIR) -s $(CONFFILE) $(PELICANOPTS); \
 	fi
 
 bundle:
@@ -95,7 +95,7 @@ publish:
 	                -F 'cd /site && pelican /input -o /output -t /theme -s $(PUBLISHCONF) $(PELICANOPTS)'; \
 	else \
 		echo 'Building a public web-site using a local Pelican'; \
-		@$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(BASEDIR)/$(PUBLISHCONF) $(PELICANOPTS); \
+		$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -t $(THEMEDIR) -s $(PUBLISHCONF) $(PELICANOPTS); \
 	fi
 
 github: publish

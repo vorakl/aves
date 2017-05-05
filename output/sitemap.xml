@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+    <loc>./</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>./news/</loc>
+    <priority>1</priority>
+    <changefreq>daily</changefreq>
+</url>
+<url>
+    <loc>./articles/</loc>
+    <priority>1</priority>
+    <changefreq>daily</changefreq>
+</url><url>
+    <loc>./categories/</loc>
+    <priority>1</priority>
+    <changefreq>daily</changefreq>
+</url><url>
+    <loc>./tags/</loc>
+    <priority>1</priority>
+    <changefreq>daily</changefreq>
+</url><url>
+    <loc>./pages/</loc>
+    <priority>1</priority>
+    <changefreq>daily</changefreq>
+</url><url>
+    <loc>./articles/value/</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+</url>
+<url>
+    <loc>./articles/metrics/</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+</url>
+<url>
+    <loc>./articles/metrics-ru/</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+</url><url>
+    <loc>./articles/leadership/</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+</url>
+<url>
+    <loc>./articles/interfaces/</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+</url>
+<url>
+    <loc>./articles/innovation/</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+</url>
+<url>
+    <loc>./articles/clouds/</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+</url>
+<url>
+    <loc>./articles/processes/</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+</url>
+<url>
+    <loc>./articles/partnerships/</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+</url>
+<url>
+    <loc>./articles/expertise/</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+</url>
+<url>
+    <loc>./pages/about/</loc>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+</url>
+</urlset>
