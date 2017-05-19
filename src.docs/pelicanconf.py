@@ -90,6 +90,7 @@ STATIC_PATHS = [
     'static/robots.txt',
     'static/google747986e3861ca881.html',
     'static/favicon.ico',
+    'images',
     ]
 # and sprecial output paths for them
 EXTRA_PATH_METADATA = {

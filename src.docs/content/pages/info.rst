@@ -11,7 +11,7 @@ A theme for the Pelican (a static site generator)
 * Examples_
 * `A few words about index.html`_
 * `A recommended minimum of variables and required values`_
-
+* Screenshots_
 
 About
 =====
@@ -60,7 +60,7 @@ This theme relies on a bunch of variables which are set in specific values. So, 
 Examples
 ========
 
-The example of a site's configuration with articles, pages, sitemap, robots.txt, favicon.ico, etc which is assumed to be used in GitHub Pages is presented at the `separate branch`__.
+The example of a site's configuration with articles, pages, sitemap, robots.txt, favicon.ico, etc which is assumed to be used in GitHub Pages is presented in the `separate branch`__.
 
 __ https://github.com/vorakl/aves/tree/example-site
 
@@ -143,6 +143,20 @@ These existing variables should be present for a proper rendering (please, check
 * ``MONTH_ARCHIVE_SAVE_AS`` 
 * ``DAY_ARCHIVE_SAVE_AS``
 
+Screenshots
+===========
+
+|screenshot-1|
+
+|screenshot-2|
+
+|screenshot-3|
+
+|screenshot-4|
+
+|screenshot-5|
+
+
 .. Links
 
 .. _Pelican: https://github.com/getpelican/pelican
@@ -151,3 +165,20 @@ These existing variables should be present for a proper rendering (please, check
 .. _`my blog`: http://vorakl.name/
 .. _`TrivialRC's page`: http://trivialrc.vorakl.name/
 .. _`How to Write a Copyright Notice`: https://www.plagiarismtoday.com/2011/11/08/how-to-write-a-copyright-notice/
+
+.. |screenshot-1| image:: {filename}/images/screenshot-1-news-desktop.png
+   :alt: The main landing page with news
+   :align: bottom
+.. |screenshot-2| image:: {filename}/images/screenshot-2-article.png
+   :alt: An example of an article page
+   :align: bottom
+.. |screenshot-3| image:: {filename}/images/screenshot-3-archive.png
+   :alt: An archive index page
+   :align: bottom
+.. |screenshot-4| image:: {filename}/images/screenshot-4-authors-tablet.png
+   :alt: An exmle of how Author's index looks like on tablets
+   :align: bottom
+.. |screenshot-5| image:: {filename}/images/screenshot-5-news-mobile.png
+   :alt: The main landing page on a common mobile device
+   :align: bottom
+

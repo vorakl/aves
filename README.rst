@@ -11,7 +11,7 @@ A theme for the Pelican (a static site generator)
 * Examples_
 * `A few words about index.html`_
 * `A recommended minimum of variables and required values`_
-
+* Screenshots_
 
 About
 =====
@@ -142,6 +142,26 @@ These existing variables should be present for a proper rendering (please, check
 * ``YEAR_ARCHIVE_SAVE_AS`` 
 * ``MONTH_ARCHIVE_SAVE_AS`` 
 * ``DAY_ARCHIVE_SAVE_AS``
+
+Screenshots
+===========
+
+.. image:: screenshot-1-news-desktop.png
+   :alt: The main landing page with news
+   :align: center
+.. image:: screenshot-2-article.png
+   :alt: An example of an article page
+   :align: center
+.. image:: screenshot-3-archive.png
+   :alt: An archive index page
+   :align: center
+.. image:: screenshot-4-authors-tablet.png
+   :alt: An exmle of how Author's index looks like on tablets
+   :align: center
+.. image:: screenshot-5-news-mobile.png
+   :alt: The main landing page on a common mobile device
+   :align: center
+
 
 .. Links
 
