@@ -6,6 +6,7 @@
 <div class="article">
     <div class="content-title">
         <h1>{{ page.title }}</h1>
+        <h3>{{ page.summary|striptags }}</h3>
         {% if page.translations %}
             <a href="{{ SITEURL }}/{{ page.url }}" class="btn btn-info xsmall">{{ page.lang or DEFAULT_LANG }}</a>
             {% for translation in page.translations %}
