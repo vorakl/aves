@@ -1,3 +1,19 @@
+{% if DISPLAY_ITEMS_ON_SIDEBAR|default("false") %}
+    {% if MENUITEMS %}
+    <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+    <ul class="nav nav-list">
+        <li class="nav-header">
+        Menu
+        </li>
+
+        {% for title, link in MENUITEMS %}
+        <li><a href="{{ link }}">{{ title }}</a></li>
+        {% endfor %}
+    </ul>
+    </div>
+    {% endif %}
+{% endif %}
+
 {% if DISPLAY_SITE_ON_SIDEBAR|default("true") %}
 <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
     <ul class="nav nav-list">
