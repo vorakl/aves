@@ -53,6 +53,7 @@ DISPLAY_AUTHORS_ON_SIDEBAR = False # It's turned off because I'm the only one au
 DISPLAY_SUBSCRIBES_ON_SIDEBAR = True
 DISPLAY_SITE_ON_SIDEBAR = True
 DISPLAY_LINKS_ON_SIDEBAR = False # Links are set in the LINKS variable below
+DISPLAY_ITEMS_ON_SIDEBAR = False # Items are set in the MENUITEMS variable below
 
 #MENUITEMS = [("Github", "https://github.com/vorakl"), ("LinkedIn", "https://linkedin.com/in/vorakl/")]
 #LINKS = [("Github", "https://github.com/vorakl"), ("LinkedIn", "https://linkedin.com/in/vorakl/")]
