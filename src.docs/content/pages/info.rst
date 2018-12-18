@@ -166,19 +166,19 @@ Screenshots
 .. _`TrivialRC's page`: http://trivialrc.vorakl.name/
 .. _`How to Write a Copyright Notice`: https://www.plagiarismtoday.com/2011/11/08/how-to-write-a-copyright-notice/
 
-.. |screenshot-1| image:: {filename}/images/screenshot-1-news-desktop.png
+.. |screenshot-1| image:: {static}/images/screenshot-1-news-desktop.png
    :alt: The main landing page with news
    :align: bottom
-.. |screenshot-2| image:: {filename}/images/screenshot-2-article.png
+.. |screenshot-2| image:: {static}/images/screenshot-2-article.png
    :alt: An example of an article page
    :align: bottom
-.. |screenshot-3| image:: {filename}/images/screenshot-3-archive.png
+.. |screenshot-3| image:: {static}/images/screenshot-3-archive.png
    :alt: An archive index page
    :align: bottom
-.. |screenshot-4| image:: {filename}/images/screenshot-4-authors-tablet.png
+.. |screenshot-4| image:: {static}/images/screenshot-4-authors-tablet.png
    :alt: An exmle of how Author's index looks like on tablets
    :align: bottom
-.. |screenshot-5| image:: {filename}/images/screenshot-5-news-mobile.png
+.. |screenshot-5| image:: {static}/images/screenshot-5-news-mobile.png
    :alt: The main landing page on a common mobile device
    :align: bottom
 

@@ -23,7 +23,7 @@ DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 #PLUGIN_PATHS = ['/plugins']
 #PLUGINS = ['post_stats', 'pelican_youtube', 'minify'] # keep 'minify' plugin as the last element in the list to minify all output HTMLs
 
-#EXTRA_TEMPLATES_PATHS = ['/path/to/theme.local']
+#THEME_TEMPLATES_OVERRIDES = ['/path/to/theme.local']
 #FAVICON_TEMPLATE = "favicon.html" # you can add additional template for favicon's configuration
 
 DEFAULT_PAGINATION = 10 # Turns on the pagination

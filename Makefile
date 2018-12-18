@@ -48,6 +48,7 @@ help:
 html:   
 	@if docker version &>/dev/null; then \
 		echo 'Building a local web-site using docker image'; \
+		[[ ! -d "$(OUTPUTDIR)" ]] && mkdir $(OUTPUTDIR); \
 		docker run \
 		    --rm \
 		    -u $(UID):$(GID) \
@@ -85,6 +86,7 @@ serve:
 publish: 
 	@if docker version &>/dev/null; then \
 		echo 'Building a public web-site using docker image'; \
+		[[ ! -d "$(OUTPUTDIR)" ]] && mkdir $(OUTPUTDIR); \
 		docker run \
 		    --rm \
 		    -u $(UID):$(GID) \
