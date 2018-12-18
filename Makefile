@@ -27,6 +27,8 @@ ifeq ($(RELATIVE), 1)
 	PELICANOPTS += --relative-urls
 endif
 
+-include Makefile.local
+
 .PHONY: html help serve publish github
 
 help:
