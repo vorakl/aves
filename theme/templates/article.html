@@ -6,8 +6,8 @@
     <div class="article">
         <div class="content-title">
             <h1>{{ article.title }}</h1>
-            <h3>{{ article.summary|striptags }}</h3>
             <div class="well small">{% include "metadata.html" %}</div>
+            <p><h3>{{ article.summary|striptags }}</h3></p>
         </div>
 	
         <div>{{ article.content }}</div>
