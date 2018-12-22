@@ -57,8 +57,8 @@ DISPLAY_LINKS_ON_SIDEBAR = False # Links are set in the LINKS variable below
 MENUITEMS = [
     ("download", "https://github.com/vorakl/aves/archive/master.zip"),
     ("repo", "https://github.com/vorakl/aves"),
-    ("blog", "http://vorakl.name/"),
-    ("author", "http://vorakl.name/pages/about/"),
+    ("blog", "https://vorakl.name/"),
+    ("author", "https://vorakl.name/pages/about/"),
     ]
 #LINKS = [("Github", "https://github.com/vorakl"), ("LinkedIn", "https://linkedin.com/in/vorakl/")]
 DISPLAY_AUTHOR = False # Add an author in a article's metadata
