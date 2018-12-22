@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-    <loc>https://aves.vorakl.name/</loc>
+    <loc>https://aves.cf/</loc>
     <priority>0.8</priority>
     <changefreq>daily</changefreq>
 </url>
 <url>
-    <loc>https://aves.vorakl.name/pages/</loc>
+    <loc>https://aves.cf/pages/</loc>
     <priority>1</priority>
     <changefreq>daily</changefreq>
 </url><url>
-    <loc>https://aves.vorakl.name/pages/info/</loc>
+    <loc>https://aves.cf/pages/info/</loc>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
 </url>
