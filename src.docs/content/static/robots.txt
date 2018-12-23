@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /unknown/
 
-Sitemap: http://aves.vorakl.name/sitemap.xml
+Sitemap: https://aves.cf/sitemap.xml
