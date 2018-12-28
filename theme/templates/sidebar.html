@@ -26,15 +26,15 @@
         {% endif %}
 
         {% if DISPLAY_PAGES_IN_SITE|default("true") %}
-        <li><a href="{{ SITEURL }}/{{ PAGES_URL }}"><img class="iconmenu" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABLElEQVR4AY2Sg3LoQBiF77Nd6zFq27Zt27Zt27ZtnebU7U46ycxJsvt/+83qyy+D/w+J6EF9wgCQPQZUzgAtS0DP2mP4L9VB7mNefsK6bvHZQ4Gq9JIVBLdf4fYOsqEAECUvPwEt57i+hWzsi9c4+CWCwLfxBJc3UBSygsCz9gBnV8C3zG/gt2d2D+0Tm6gfWER5xyTyGwaRWd0D1sgKAtfKHRxfQlHICgLH0g0cnIMz4Fd2BqyRFQQ2BcvYOYOikBUEFtnz2DwBZ8Cv7AxYIysITNKnsXYMRSErCAySx7F8CM6AX9kZsEZWEOgmjGDxAIpCVhBoxQ5ifh+cAb+yM2CNrCBQj+qDNEZRyAoC6X7X68UNwDpjDF4lMwivXUJiyxoY/rOPNTJkn8fdA17l2BuZn2c5AAAAAElFTkSuQmCC" alt="[pages]" />Pages</a></li>
+        <li><a href="{{ SITEURL }}/{{ PAGES_URL }}"><img class="iconmenu" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABLElEQVR4AY2Sg3LoQBiF77Nd6zFq27Zt27Zt27ZtnebU7U46ycxJsvt/+83qyy+D/w+J6EF9wgCQPQZUzgAtS0DP2mP4L9VB7mNefsK6bvHZQ4Gq9JIVBLdf4fYOsqEAECUvPwEt57i+hWzsi9c4+CWCwLfxBJc3UBSygsCz9gBnV8C3zG/gt2d2D+0Tm6gfWER5xyTyGwaRWd0D1sgKAtfKHRxfQlHICgLH0g0cnIMz4Fd2BqyRFQQ2BcvYOYOikBUEFtnz2DwBZ8Cv7AxYIysITNKnsXYMRSErCAySx7F8CM6AX9kZsEZWEOgmjGDxAIpCVhBoxQ5ifh+cAb+yM2CNrCBQj+qDNEZRyAoC6X7X68UNwDpjDF4lMwivXUJiyxoY/rOPNTJkn8fdA17l2BuZn2c5AAAAAElFTkSuQmCC" alt="[pages]" />{{ DISPLAY_SIDEBAR_PAGES_NAME|default("Pages") }}</a></li>
         {% endif %}
 
         {% if DISPLAY_CATEGORIES_IN_SITE|default("true") %}
-        <li><a href="{{ SITEURL }}/{{ CATEGORIES_URL }}"><img class="iconmenu" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAflBMVEVHcEzMmGXKlmPy0bL/5czHk2Dvzqz84cfHk2DEkF353MDAjFn11re7h1Twzq7jvJe3g1Drx6Peto7Jm2+yf0zy0rLlv5jClWjgt42uekepdkPbsIOkcT7Wp3qgbTrSoXGdajfPnGqaZzSYZTKbaDWeaziibzyndEGreEWwfEnOm7M9AAAAJHRSTlMA/////////7///////////////////////////////////7/uB1ikAAAAW0lEQVR4AYXNpQEDURBF0fs+6pAP9F9TfLCCZeY9angEopDREEaCLEvbglc90YxY58RQ5sxKQSkVOas6z6hE56jYQCV19k/pSPvFXva/7BaeDN30UOXNJaswlQOK2Bmf70dgXAAAAABJRU5ErkJggg==" alt="[categories]" />Categories</a></li>
+        <li><a href="{{ SITEURL }}/{{ CATEGORIES_URL }}"><img class="iconmenu" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAflBMVEVHcEzMmGXKlmPy0bL/5czHk2Dvzqz84cfHk2DEkF353MDAjFn11re7h1Twzq7jvJe3g1Drx6Peto7Jm2+yf0zy0rLlv5jClWjgt42uekepdkPbsIOkcT7Wp3qgbTrSoXGdajfPnGqaZzSYZTKbaDWeaziibzyndEGreEWwfEnOm7M9AAAAJHRSTlMA/////////7///////////////////////////////////7/uB1ikAAAAW0lEQVR4AYXNpQEDURBF0fs+6pAP9F9TfLCCZeY9angEopDREEaCLEvbglc90YxY58RQ5sxKQSkVOas6z6hE56jYQCV19k/pSPvFXva/7BaeDN30UOXNJaswlQOK2Bmf70dgXAAAAABJRU5ErkJggg==" alt="[categories]" />{{ DISPLAY_SIDEBAR_CATEGORIES_NAME|default("Categories") }}</a></li>
         {% endif %}
 
         {% if DISPLAY_TAGS_IN_SITE|default("true") %}
-        <li><a href="{{ SITEURL }}/{{ TAGS_URL }}"><img class="iconmenu" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABaUlEQVR4AY2TA7IeQRRGexMpZxnZQryM2LZt27Zt27Ztc3TyTvymfk3Vufi+W6PuDtNOsbcKcuyt065hqIQw5URK/nr8IUO9ohtMPBqRZrDh1BMaTzuF2f7huwy9sjcYd+grcQpmhT+93Hub/tWLEUbv/8S3BA7ejbA224vcfp2gXvQGw3e/23vjZczniGowLSDW+lVzFLyBYfD2V1x9FvHhG0g0MZDtaYBYq+k7V/AG0n/zMy4++c6bL/BxVCDZ1QBONTbbq+vjXMEbSK91Dzn76BsvPsOLgYFobS3YXcdsr66PcwVvIN1W3uXk/a88/Qj3ewS+zqoBS2ua7dX1ca7gDaTT0pscu/uFR+/hWvvA5zH+0F/ZXl3fuaLr227hVQ7f/sz9d3C+RfA/iLWaHs44XJTW8y5x8OYn7r71fwaxVkMv9wmFaTH7PPtufOT2G8QatcI/sQhNZ5xh3/WPgnV+GSvCgyZ5/QeQVjev4io8YwAAAABJRU5ErkJggg==" alt="[tags]" />Tags</a></li>
+        <li><a href="{{ SITEURL }}/{{ TAGS_URL }}"><img class="iconmenu" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABaUlEQVR4AY2TA7IeQRRGexMpZxnZQryM2LZt27Zt27Ztc3TyTvymfk3Vufi+W6PuDtNOsbcKcuyt065hqIQw5URK/nr8IUO9ohtMPBqRZrDh1BMaTzuF2f7huwy9sjcYd+grcQpmhT+93Hub/tWLEUbv/8S3BA7ejbA224vcfp2gXvQGw3e/23vjZczniGowLSDW+lVzFLyBYfD2V1x9FvHhG0g0MZDtaYBYq+k7V/AG0n/zMy4++c6bL/BxVCDZ1QBONTbbq+vjXMEbSK91Dzn76BsvPsOLgYFobS3YXcdsr66PcwVvIN1W3uXk/a88/Qj3ewS+zqoBS2ua7dX1ca7gDaTT0pscu/uFR+/hWvvA5zH+0F/ZXl3fuaLr227hVQ7f/sz9d3C+RfA/iLWaHs44XJTW8y5x8OYn7r71fwaxVkMv9wmFaTH7PPtufOT2G8QatcI/sQhNZ5xh3/WPgnV+GSvCgyZ5/QeQVjev4io8YwAAAABJRU5ErkJggg==" alt="[tags]" />{{ DISPLAY_SIDEBAR_TAGS_NAME|default("Tags") }}</a></li>
         {% endif %}
 
         {% if DISPLAY_AUTHORS_IN_SITE|default("true") %}
@@ -106,7 +106,7 @@
     <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
     <ul class="nav nav-list">
         <li class="nav-header"> 
-        DISPLAY_SIDEBAR_TAGS_NAME|default("TAGS")
+            {{ DISPLAY_SIDEBAR_TAGS_NAME|default("TAGS") }}
         </li>
         
         {% for tag, null in tags %}
