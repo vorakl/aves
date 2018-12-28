@@ -1,6 +1,6 @@
 on {{ article.locale_date }}
 
-{% if article.author and DISPLAY_AUTHOR %}
+{% if article.author and DISPLAY_AUTHOR_IN_ARTICLE %}
 by <a class="url fn" href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>
 {% endif %}
 
@@ -17,4 +17,6 @@ in <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
     about {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> {% endfor %}
 {% endif %}
 
-~{{ article.stats['read_mins'] if article.stats is defined else "0" }} min read
+{% if article.stats is defined %}
+~{{ article.stats['read_mins'] }} min read
+{% endif %}
