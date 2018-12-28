@@ -3,8 +3,8 @@
 {% block title %}{{ SITENAME }} :: The list of categories{% endblock %}
 
 {% block content_title %}
-<div class="content-title">                                                                                                             
-    <h1>Categories</h1>
+<div class="content-title">
+    <h1>{{ DISPLAY_SIDEBAR_CATEGORIES_NAME|default("Categories") }}</h1>
 </div>
 {% endblock %}
 
