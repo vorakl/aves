@@ -14,8 +14,6 @@ PUBLISHCONF=publishconf.py
 UID=$(shell id -u)
 GID=$(shell id -g)
 
-GITHUB_PAGES_BRANCH=master
-
 PORT ?= 8000
 DEBUG ?= 0
 ifeq ($(DEBUG), 1)
@@ -29,7 +27,7 @@ endif
 
 -include Makefile.local
 
-.PHONY: html help serve publish github
+.PHONY: html help serve publish
 
 help:
 	@echo 'Makefile for a pelican Web site                                           '
@@ -39,7 +37,6 @@ help:
 	@echo '   make publish                    generate using production settings     '
 	@echo '   make bundle                     generate bundled version of CSS and JS '
 	@echo '   make serve [PORT=8000]          serve site at http://localhost:8000/   '
-	@echo '   make github                     push the web site to GitHub            '
 	@echo '                                                                          '
 	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html   '
 	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
@@ -99,12 +96,5 @@ publish:
 	                -F 'cd /site && pelican /input -o /output -t /theme -s $(PUBLISHCONF) $(PELICANOPTS)'; \
 	else \
 		echo 'Building a public web-site using a local Pelican'; \
-		$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -t $(THEMEDIR) -s $(PUBLISHCONF) $(PELICANOPTS); \
+		vorakl/alpine-pelican$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -t $(THEMEDIR) -s $(PUBLISHCONF) $(PELICANOPTS); \
 	fi
-
-github: publish
-	@cd $(OUTPUTDIR) && \
-	  git add . && \
-	  git commit -m "New content" && \
-	  git push origin $(GITHUB_PAGES_BRANCH)
-
