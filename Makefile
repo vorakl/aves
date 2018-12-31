@@ -27,7 +27,7 @@ endif
 
 -include Makefile.local
 
-.PHONY: html help serve publish
+.PHONY: dev help serve dev
 
 help:
 	@echo 'Makefile for a pelican Web site                                           '
@@ -42,7 +42,7 @@ help:
 	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
 	@echo '                                                                          '
 
-html:   
+dev:
 	@if docker version &>/dev/null; then \
 		echo 'Building a local web-site using docker image'; \
 		[[ ! -d "$(OUTPUTDIR)" ]] && mkdir $(OUTPUTDIR); \
@@ -80,7 +80,7 @@ serve:
 		cd $(OUTPUTDIR) && $(PY) -m pelican.server $(PORT); \
 	fi
 
-publish: 
+prod:
 	@if docker version &>/dev/null; then \
 		echo 'Building a public web-site using docker image'; \
 		[[ ! -d "$(OUTPUTDIR)" ]] && mkdir $(OUTPUTDIR); \
