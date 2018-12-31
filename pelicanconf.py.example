@@ -26,6 +26,8 @@ DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 #THEME_TEMPLATES_OVERRIDES = ['/path/to/theme.local']
 #FAVICON_TEMPLATE = "favicon.html" # you can add additional template for favicon's configuration
 #LOCALCSS_TEMPLATE = "localcss.html" # you can override some default styles
+#THEME_MENU_COLOR_1 = "#2e435e"
+#THEME_MENU_COLOR_2 = "#205081"
 
 DEFAULT_PAGINATION = 10 # Turns on the pagination
 PAGINATION_PATTERNS = (
