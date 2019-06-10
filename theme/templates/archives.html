@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
-{% block title %}{{ SITENAME }} :: The archive of all articles{% endblock %}
+{% block title %}{{ SITENAME }} :: {{ DISPLAY_SIDEBAR_ARCHIVES_NAME|default("Archives") }}{% endblock %}
 
 {% block content_title %}
 <div class="content-title">
-    <h1>The archive of all articles</h1>
+    <h1>{{ DISPLAY_SIDEBAR_ARCHIVES_NAME|default("Archives") }}</h1>
 </div>
 {% endblock %}
 
