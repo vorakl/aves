@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 
-{% block title %}{{ SITENAME }} :: The list of tags{% endblock %}
+{% block title %}{{ SITENAME }} :: {{ DISPLAY_SIDEBAR_TAGS_NAME|default("Tags") }}{% endblock %}
 
 {% block content_title %}
-<div class="content-title">                                                                                                             
+<div class="content-title">
     <h1>{{ DISPLAY_SIDEBAR_TAGS_NAME|default("Tags") }}</h1>
 </div>
 {% endblock %}

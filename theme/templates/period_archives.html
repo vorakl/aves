@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
-{% block title %}{{ SITENAME }} :: Archives for {{ period | reverse | join(' ') }}{% endblock %}
+{% block title %}{{ SITENAME }} :: {{ period | reverse | join(' ') }}{% endblock %}
 
 {% block content_title %}
 <div class="content-title">
-    <h1>Archives for {{ period | reverse | join(' ') }}</h1>
+    <h1>{{ period | reverse | join(' ') }}</h1>
 </div>
 {% endblock %}
 

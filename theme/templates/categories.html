@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}{{ SITENAME }} :: The list of categories{% endblock %}
+{% block title %}{{ SITENAME }} :: {{ DISPLAY_SIDEBAR_CATEGORIES_NAME|default("Categories") }}{% endblock %}
 
 {% block content_title %}
 <div class="content-title">

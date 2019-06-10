@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}{{ SITENAME }} :: Pages{% endblock %}
+{% block title %}{{ SITENAME }} :: {{ DISPLAY_SIDEBAR_PAGES_NAME|default("Pages") }}{% endblock %}
 
 {% block content_title %}
 <div class="content-title">
