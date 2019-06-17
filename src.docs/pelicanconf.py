@@ -9,11 +9,11 @@ AUTHOR = u'Oleksii Tsvietnov'
 SITENAME = u"Aves"
 SITEURL = 'https://aves.cf'
 SITEDESC = u'A theme for Pelican (a static site generator)'
-SITE_VERSION = '1494021623'
+SITE_VERSION = '1494021624'
 SITE_KEYWORDS = 'aves,pelican,pelican theme,aves them,static site generator'
 ARTICLE_PATHS = ['articles'] # a place for articles under the content location
 PAGE_PATHS = ['pages']
-CONTACT_URL = 'http://vorakl.name/pages/about/'
+CONTACT_URL = 'https://vorakl.com/pages/about/'
 START_URL = 'pages/info/' # What's a start point of a site (like 'news/' or 'pages/about/')?
 TIMEZONE = 'Europe/Berlin'
 DEFAULT_LANG = u'en'
@@ -40,7 +40,7 @@ OUTPUT_RETENTION = ["CNAME"] # but these dirs and files should be kept
 ############################
 
 DISPLAY_MENU = True
-DISPLAY_PAGES_ON_MENU = False
+DISPLAY_PAGES_IN_MENU = False
 DISPLAY_CATEGORIES_ON_MENU = False
 DISPLAY_ITEMS_ON_MENU = True # Items are set in the MENUITEMS variable below
 
@@ -57,8 +57,8 @@ DISPLAY_LINKS_ON_SIDEBAR = False # Links are set in the LINKS variable below
 MENUITEMS = [
     ("download", "https://github.com/vorakl/aves/archive/master.zip"),
     ("repo", "https://github.com/vorakl/aves"),
-    ("blog", "https://vorakl.name/"),
-    ("author", "https://vorakl.name/pages/about/"),
+    ("blog", "https://vorakl.com/"),
+    ("author", "https://vorakl.com/pages/about/"),
     ]
 #LINKS = [("Github", "https://github.com/vorakl"), ("LinkedIn", "https://linkedin.com/in/vorakl/")]
 DISPLAY_AUTHOR = False # Add an author in a article's metadata

@@ -168,6 +168,6 @@ Screenshots
 .. _Pelican: https://github.com/getpelican/pelican
 .. _`tuxlite_tbs`: https://github.com/getpelican/pelican-themes/tree/master/tuxlite_tbs
 .. _example: https://github.com/vorakl/aves/tree/example
-.. _`my blog`: http://vorakl.name/
-.. _`TrivialRC's page`: http://trivialrc.vorakl.name/
+.. _`my blog`: https://vorakl.com/
+.. _`TrivialRC's page`: https://trivialrc.cf/
 .. _`How to Write a Copyright Notice`: https://www.plagiarismtoday.com/2011/11/08/how-to-write-a-copyright-notice/
