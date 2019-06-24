@@ -1,9 +1,9 @@
 {% extends "index.html" %}
 
-{% block title %}{{ SITENAME }} :: {{ tag }}{% endblock %}
+{% block title %}{{ SITENAME }} :: {{ TAGS_DESCRIPTION[tag] if tag in TAGS_DESCRIPTION|list else tag }}{% endblock %}
 
 {% block content_title %}
 <div class="content-title">
-    <h1>{{ tag }}</h1>
+    <h1>{{ TAGS_DESCRIPTION[tag] if tag in TAGS_DESCRIPTION|list else tag }}</h1>
 </div>
 {% endblock %}

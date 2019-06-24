@@ -1,9 +1,9 @@
 {% extends "index.html" %}
 
-{% block title %}{{ SITENAME }} :: {{ category }}{% endblock %}
+{% block title %}{{ SITENAME }} :: {{ CATEGORIES_DESCRIPTION[category] if category in CATEGORIES_DESCRIPTION|list else category }}{% endblock %}
 
 {% block content_title %}
 <div class="content-title">
-    <h1>{{ category }}</h1>
+    <h1>{{ CATEGORIES_DESCRIPTION[category] if category in CATEGORIES_DESCRIPTION|list else category }}</h1>
 </div>
 {% endblock %}
