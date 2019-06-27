@@ -1,5 +1,6 @@
 {% extends "index.html" %}
 
+{% block canonical %}<link rel="canonical" href="{{ SITEURL }}/{{ tag.url }}"/>{% endblock %}
 {% block title %}{{ SITENAME }} :: {{ TAGS_DESCRIPTION[tag] if tag in TAGS_DESCRIPTION|list else tag }}{% endblock %}
 
 {% block content_title %}

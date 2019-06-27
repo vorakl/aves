@@ -1,5 +1,6 @@
 {% extends "index.html" %}
 
+{% block canonical %}<link rel="canonical" href="{{ SITEURL }}/{{ author.url }}"/>{% endblock %}
 {% block title %}{{ SITENAME }} :: Articles written by {{ author }}{% endblock %}
 
 {% block content_title %}

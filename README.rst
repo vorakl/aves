@@ -35,7 +35,8 @@ Features
     + on group pages (tags, articles) it's set to dates of a first and a last articles
     + on a single page or article it's set to a creation date
 * Versioning of static assets from the config file 
-* Configurable header tags (``meta``) for SEO and a separate template for a favicon
+* Configurable meta "robots" and rel "canonical" HTML headers
+* The right default configuration of robots meta tag for paginated pages
 * Shows avarage time to read an article
 * Bonus:
     + a template of ``content`` directory and examples of configuration files for a tyical site

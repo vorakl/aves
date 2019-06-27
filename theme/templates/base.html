@@ -6,8 +6,10 @@
     <meta name="description" content="{{ SITEDESC }}">
     <meta name="author" content="{{ AUTHOR }}">
     <meta name="keywords" content="{{ SITE_KEYWORDS }}">
-    <meta name="robots" content="index,follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    {% block robots %}<meta name="robots" content="index,follow">{% endblock %}
+    {% block canonical %}{% endblock %}
 
     <!--[if lt IE 9]>
     <script src="{{ SITEURL }}/theme/html5.js?v={{ SITE_VERSION }}"></script>

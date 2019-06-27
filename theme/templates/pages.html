@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 
+{% block canonical %}<link rel="canonical" href="{{ SITEURL }}/{{ PAGES_URL }}"/>{% endblock %}
 {% block title %}{{ SITENAME }} :: {{ DISPLAY_SIDEBAR_PAGES_NAME|default("Pages") }}{% endblock %}
 
 {% block content_title %}

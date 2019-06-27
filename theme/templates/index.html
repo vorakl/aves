@@ -1,5 +1,8 @@
 {% extends "base.html" %}
 
+{% block robots %}<meta name="robots" content="noindex,nofollow">{% endblock %}
+{% block canonical %}<link rel="canonical" href="{{ SITEURL }}/"/>{% endblock %}
+
 {% block content_title %}
 <div class="content-title">
     <h1>{{ SITEDESC|default("This is a default site description") }}</h1>

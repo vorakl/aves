@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 
+{% block canonical %}<link rel="canonical" href="{{ SITEURL }}/{{ article.url }}"/>{% endblock %}
 {% block title %}{{ SITENAME }} :: {{ article.title }}{% endblock %}
 
 {% block content %}

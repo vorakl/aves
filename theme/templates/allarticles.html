@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 
+{% block canonical %}<link rel="canonical" href="{{ SITEURL }}/{{ ALLARTICLES_URL }}"/>{% endblock %}
 {% block title %}{{ SITENAME }} :: {{ DISPLAY_SIDEBAR_ALLARTICLES_NAME|default("All articles") }}{% endblock %}
 
 {% block content_title %}
