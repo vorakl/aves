@@ -64,30 +64,46 @@
     </div>
 
     <footer>
-        <p class="p-footer">
-        {% block copyright_notice %}
-            {% if articles %}
-               {% set copy_date1 = articles[0].date.strftime('%Y') %}
-               {% set copy_dateN = articles[-1].date.strftime('%Y') %}
-               {% if copy_dateN == copy_date1 %}
-                    {% set copy_date = copy_date1 %}
-               {% else %}
-                    {% set copy_date = copy_dateN + '-' + copy_date1 %}
-               {% endif %}
-            {% elif pages %}
-                {% set copy_date = pages|first|attr("date")|strftime('%Y') %}
+       <div class="container">
+       <div class="row">
+            <div class="span5">
+            {% block copyright_notice %}
+                <div class="pull-left">
+                    {% if articles %}
+                       {% set copy_date1 = articles[0].date.strftime('%Y') %}
+                       {% set copy_dateN = articles[-1].date.strftime('%Y') %}
+                       {% if copy_dateN == copy_date1 %}
+                            {% set copy_date = copy_date1 %}
+                       {% else %}
+                            {% set copy_date = copy_dateN + '-' + copy_date1 %}
+                       {% endif %}
+                    {% elif pages %}
+                        {% set copy_date = pages|first|attr("date")|strftime('%Y') %}
+                    {% else %}
+                       {% set copy_date = '' %}
+                    {% endif %}
+                    &copy; {{ copy_date }} <a href="{{ CONTACT_URL|default("#") }}">{{ AUTHOR }}</a> All Rights Reserved
+                </div>
+            {% endblock %}
+            </div>
+            {% if COUNTER_TEMPLATE %}
+                <div class="span3">
+                        {% include COUNTER_TEMPLATE %}
+                </div>
+                <div class="span4">
+                    <div class="pull-right">
+                        Powered by <a href="https://github.com/getpelican/pelican">Pelican</a> and <a href="https://aves.cf/">Aves</a> theme
+                    </div>
+                </div>
             {% else %}
-               {% set copy_date = '' %}
+                <div class="span7">
+                    <div class="pull-right">
+                        Powered by <a href="https://github.com/getpelican/pelican">Pelican</a> and <a href="https://aves.cf/">Aves</a> theme
+                    </div>
+                </div>
             {% endif %}
-
-            <span class="pull-left">
-                &copy; {{ copy_date }} <a href="{{ CONTACT_URL|default("#") }}">{{ AUTHOR }}</a> All Rights Reserved
-            </span>
-        {% endblock %}
-            <span class="pull-right">
-                Powered by <a href="https://github.com/getpelican/pelican">Pelican</a> and <a href="https://aves.cf/">Aves</a> theme
-            </span>
-        </p>
+        </div>
+        </div>
     </footer>
 </div>
 
