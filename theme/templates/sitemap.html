@@ -2,67 +2,63 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
     <loc>{{ SITEURL }}/</loc>
-    <priority>0.8</priority>
     <changefreq>daily</changefreq>
 </url>
 {% if DISPLAY_ARCHIVES_IN_SITE -%}
 <url>
-    <loc>{{ SITEURL }}/news/</loc>
-    <priority>1</priority>
+    <loc>{{ SITEURL }}/articles/</loc>
     <changefreq>daily</changefreq>
 </url>
+{%- endif %}
+{% if DISPLAY_ALLARTICLES_IN_SITE -%}
 <url>
-    <loc>{{ SITEURL }}/articles/</loc>
-    <priority>1</priority>
+    <loc>{{ SITEURL }}/allarticles/</loc>
     <changefreq>daily</changefreq>
 </url>
 {%- endif %}
 {% if DISPLAY_CATEGORIES_IN_SITE -%}
 <url>
     <loc>{{ SITEURL }}/categories/</loc>
-    <priority>1</priority>
     <changefreq>daily</changefreq>
 </url>
 {%- endif %}
 {% if DISPLAY_TAGS_IN_SITE -%}
 <url>
     <loc>{{ SITEURL }}/tags/</loc>
-    <priority>1</priority>
     <changefreq>daily</changefreq>
 </url>
 {%- endif %}
 {% if DISPLAY_PAGES_IN_SITE -%}
 <url>
     <loc>{{ SITEURL }}/pages/</loc>
-    <priority>1</priority>
     <changefreq>daily</changefreq>
 </url>
 {%- endif %}
 {% for article in articles -%}
 <url>
     <loc>{{ SITEURL }}/{{ article.url }}</loc>
-    <priority>0.8</priority>
     <changefreq>weekly</changefreq>
+    <lastmod>{{ article.date.strftime('%Y-%m-%d') }}</lastmod>
 </url>
 {% for translation in article.translations -%}
 <url>
     <loc>{{ SITEURL }}/{{ translation.url }}</loc>
-    <priority>0.8</priority>
     <changefreq>weekly</changefreq>
+    <lastmod>{{ translation.date.strftime('%Y-%m-%d') }}</lastmod>
 </url>
 {%- endfor %}
 {%- endfor %}
 {% for page in pages -%}
 <url>
     <loc>{{ SITEURL }}/{{ page.url }}</loc>
-    <priority>1.0</priority>
     <changefreq>weekly</changefreq>
+    <lastmod>{{ page.date.strftime('%Y-%m-%d') }}</lastmod>
 </url>
 {% for translation in page.translations -%}
 <url>
     <loc>{{ SITEURL }}/{{ translation.url }}</loc>
-    <priority>1.0</priority>
     <changefreq>weekly</changefreq>
+    <lastmod>{{ translation.date.strftime('%Y-%m-%d') }}</lastmod>
 </url>
 {%- endfor %}
 {%- endfor %}

@@ -71,7 +71,7 @@ DISPLAY_SIDEBAR_MENUITEMS_NAME = "Menu"
 
 # SIDEBAR.SITE
 DISPLAY_ARCHIVES_IN_SITE = True # It also turns on/off an appropriate section in a sitemap.xml
-DISPLAY_ALLARTICLES_IN_SITE = True 
+DISPLAY_ALLARTICLES_IN_SITE = True # It also turns on/off an appropriate section in a sitemap.xml 
 DISPLAY_CATEGORIES_IN_SITE = True # It also turns on/off an appropriate section in a sitemap.xml
 DISPLAY_TAGS_IN_SITE = True # It also turns on/off an appropriate section in a sitemap.xml
 DISPLAY_PAGES_IN_SITE = True # It also turns on/off an appropriate section in a sitemap.xml 
