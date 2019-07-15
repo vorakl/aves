@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 
 {% block canonical %}<link rel="canonical" href="{{ SITEURL }}/{{ ARCHIVES_URL }}"/>{% endblock %}
-{% block robots %}<meta name="robots" content="noindex,nofollow">{% endblock %}
+{% block robots %}<meta name="robots" content="noindex, nosnippet">{% endblock %}
+
 {% block title %}{{ SITENAME }} :: {{ period | reverse | join(' ') }}{% endblock %}
 
 {% block content_title %}

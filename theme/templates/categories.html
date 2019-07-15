@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 
 {% block canonical %}<link rel="canonical" href="{{ SITEURL }}/{{ CATEGORIES_URL }}"/>{% endblock %}
+{% block robots %}<meta name="robots" content="noindex, nosnippet">{% endblock %}
+
 {% block title %}{{ SITENAME }} :: {{ DISPLAY_SIDEBAR_CATEGORIES_NAME|default("Categories") }}{% endblock %}
 
 {% block content_title %}
