@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 
-{% block canonical %}<link rel="canonical" href="{{ SITEURL }}/{{ page.url }}"/>{% endblock %}
-{% block robots %}<meta name="robots" content="{{ page.robots if page.robots else 'all' }}">{% endblock %}
+{% block canonical %}<link rel="canonical" href="{{ SITEURL }}/{{ page.url }}" />{% endblock %}
+{% block robots %}<meta name="robots" content="{{ page.robots if page.robots else 'all' }}" />{% endblock %}
+{% block description %}<meta name="description" content="{{ page.summary|striptags if page.summary else page.title }}" />{% endblock %}
 
 {% block title %}{{ SITENAME }} :: {{ page.title }}{% endblock %}
 
