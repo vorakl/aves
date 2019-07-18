@@ -3,7 +3,7 @@
 {% block canonical %}<link rel="canonical" href="{{ SITEURL }}/{{ tag.url }}"/>{% endblock %}
 {% block robots %}<meta name="robots" content="noindex, nosnippet">{% endblock %}
 
-{% block title %}{{ SITENAME }} :: {{ TAGS_DESCRIPTION[tag] if tag in TAGS_DESCRIPTION|list else tag }}{% endblock %}
+{% block title %}{{ TAGS_DESCRIPTION[tag] if tag in TAGS_DESCRIPTION|list else tag }} :: {{ SITENAME }}{% endblock %}
 
 {% block content_title %}
 <div class="content-title">

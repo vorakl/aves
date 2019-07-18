@@ -3,7 +3,7 @@
 {% block canonical %}<link rel="canonical" href="{{ SITEURL }}/{{ TAGS_URL }}"/>{% endblock %}
 {% block robots %}<meta name="robots" content="noindex, nosnippet">{% endblock %}
 
-{% block title %}{{ SITENAME }} :: {{ DISPLAY_SIDEBAR_TAGS_NAME|default("Tags") }}{% endblock %}
+{% block title %}{{ DISPLAY_SIDEBAR_TAGS_NAME|default("Tags") }} :: {{ SITENAME }}{% endblock %}
 
 {% block content_title %}
 <div class="content-title">
