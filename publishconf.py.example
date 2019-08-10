@@ -9,10 +9,11 @@ import os
 import sys
 sys.path.append(os.curdir)
 
-# inherits pelicanconf configuration
-from pelicanconf import *
+# inherits sitedev configuration
+from sitedev import *
 
 RELATIVE_URLS = False
-GOOGLE_ANALYTICS = 'UA-12345678-90'
-FEED_EMAIL = 'https://feedburner.google.com/fb/a/mailverify?uri=sitefeed/atom&amp;loc=en_US'
-FEED_DOMAIN = 'http://feeds.feedburner.com'
+GOOGLE_ANALYTICS = 'UA-0123456789-1'
+FEED_EMAIL = 'https://feedburner.google.com/fb/a/mailverify?uri=voraklsnotes/atom&amp;loc=en_US'
+FEED_DOMAIN = 'http://feed.vorakl.com'
+FEED_ALL_ATOM = 'voraklsnotes/atom'
