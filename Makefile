@@ -27,7 +27,7 @@ endif
 
 -include Makefile.local
 
-.PHONY: dev help serve dev
+.PHONY: dev help bundle serve run dev prod
 
 help:
 	@echo 'Makefile for a pelican Web site                                           '
@@ -65,6 +65,8 @@ bundle:
 	@cd $(STATICDIR) && \
 	cat bootstrap.min.css bootstrap.min.responsive.css local.min.css pygments.min.css > bootstrap-pygments.bundle.min.css && \
 	cat jquery.min.js bootstrap-collapse.min.js > jquery-bootstrap-collapse.bundle.min.js
+
+run:	serve
 
 serve:
 	@if docker version &>/dev/null; then \
