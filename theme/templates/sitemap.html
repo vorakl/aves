@@ -4,27 +4,9 @@
     <loc>{{ SITEURL }}/</loc>
     <changefreq>daily</changefreq>
 </url>
-{% if DISPLAY_ARCHIVES_IN_SITE -%}
-<url>
-    <loc>{{ SITEURL }}/articles/</loc>
-    <changefreq>daily</changefreq>
-</url>
-{%- endif %}
 {% if DISPLAY_ALLARTICLES_IN_SITE -%}
 <url>
     <loc>{{ SITEURL }}/allarticles/</loc>
-    <changefreq>daily</changefreq>
-</url>
-{%- endif %}
-{% if DISPLAY_CATEGORIES_IN_SITE -%}
-<url>
-    <loc>{{ SITEURL }}/categories/</loc>
-    <changefreq>daily</changefreq>
-</url>
-{%- endif %}
-{% if DISPLAY_TAGS_IN_SITE -%}
-<url>
-    <loc>{{ SITEURL }}/tags/</loc>
     <changefreq>daily</changefreq>
 </url>
 {%- endif %}
