@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>{% block title %}{{ SITETITLE }} :: {{ SITENAME }}{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     {% block robots %}<meta name="robots" content="all">{% endblock %}
     {% block canonical %}{% endblock %}
     {% block description %}{% endblock %}
@@ -34,7 +34,6 @@
 </head>
 
 <body>
-
 {% if DISPLAY_MENU|default("true") %}
 <div class="navbar">
     <div class="navbar-inner">
@@ -48,12 +47,13 @@
 <div class="container">
     <div class="content">
     <div class="row">
-        <div{% if DISPLAY_SIDEBAR|default("true") %} class="span9"{% else %} class="span12"{% endif %}>
+        <div {% if DISPLAY_SIDEBAR|default("true") %}class="span9"{% else %}class="span12"{% endif %}>
             {% block content_title %}{% endblock %}
             {% block content %}{% endblock %}
+            {% if ADD_SHARING_LINKS|default("true") %}{% block content_sharing %}{% endblock %}{% endif %}
         </div>
 
-        {% if DISPLAY_SIDEBAR|default("true") %}                
+        {% if DISPLAY_SIDEBAR|default("true") %}
             <div class="span3">
                 {% include "sidebar.html" %}
             </div>
@@ -62,45 +62,45 @@
     </div>
 
     <footer>
-       <div class="container">
-       <div class="row">
-            <div class="span5">
-            {% block copyright_notice %}
-                <div class="pull-left">
-                    {% if articles %}
-                       {% set copy_date1 = articles[0].date.strftime('%Y') %}
-                       {% set copy_dateN = articles[-1].date.strftime('%Y') %}
-                       {% if copy_dateN == copy_date1 %}
-                            {% set copy_date = copy_date1 %}
-                       {% else %}
-                            {% set copy_date = copy_dateN + '-' + copy_date1 %}
-                       {% endif %}
-                    {% elif pages %}
-                        {% set copy_date = pages|first|attr("date")|strftime('%Y') %}
-                    {% else %}
-                       {% set copy_date = '' %}
-                    {% endif %}
-                    &copy; {{ copy_date }} <a href="{{ CONTACT_URL|default("#") }}">{{ AUTHOR }}</a> All Rights Reserved
+        <div class="container">
+            <div class="row">
+                <div class="span5">
+                    {% block copyright_notice %}
+                    <div class="pull-left">
+                        {% if articles %}
+                        {% set copy_date1 = articles[0].date.strftime('%Y') %}
+                        {% set copy_dateN = articles[-1].date.strftime('%Y') %}
+                        {% if copy_dateN == copy_date1 %}
+                                {% set copy_date = copy_date1 %}
+                        {% else %}
+                                {% set copy_date = copy_dateN + '-' + copy_date1 %}
+                        {% endif %}
+                        {% elif pages %}
+                            {% set copy_date = pages|first|attr("date")|strftime('%Y') %}
+                        {% else %}
+                        {% set copy_date = '' %}
+                        {% endif %}
+                        &copy; {{ copy_date }} <a href="{{ CONTACT_URL|default("#") }}">{{ AUTHOR }}</a> All Rights Reserved
+                    </div>
+                    {% endblock %}
                 </div>
-            {% endblock %}
+                {% if COUNTER_TEMPLATE %}
+                    <div class="span3">
+                            {% include COUNTER_TEMPLATE %}
+                    </div>
+                    <div class="span4">
+                        <div class="pull-right">
+                            Powered by <a href="https://github.com/getpelican/pelican">Pelican</a> and <a href="https://aves.cf/">Aves</a> theme
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="span7">
+                        <div class="pull-right">
+                            Powered by <a href="https://github.com/getpelican/pelican">Pelican</a> and <a href="https://aves.cf/">Aves</a> theme
+                        </div>
+                    </div>
+                {% endif %}
             </div>
-            {% if COUNTER_TEMPLATE %}
-                <div class="span3">
-                        {% include COUNTER_TEMPLATE %}
-                </div>
-                <div class="span4">
-                    <div class="pull-right">
-                        Powered by <a href="https://github.com/getpelican/pelican">Pelican</a> and <a href="https://aves.cf/">Aves</a> theme
-                    </div>
-                </div>
-            {% else %}
-                <div class="span7">
-                    <div class="pull-right">
-                        Powered by <a href="https://github.com/getpelican/pelican">Pelican</a> and <a href="https://aves.cf/">Aves</a> theme
-                    </div>
-                </div>
-            {% endif %}
-        </div>
         </div>
     </footer>
 </div>

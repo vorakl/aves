@@ -13,8 +13,14 @@
             <div class="well small">{% include "metadata.html" %}</div>
             <p><h3>{{ article.summary|striptags }}</h3></p>
         </div>
-	
+
         <div>{{ article.content }}</div>
+    </div>
+{% endblock %}
+
+{% block content_sharing %}
+    <div class="article">
+        <p>Share on <a href="https://twitter.com/intent/tweet?text={{ article.title|urlencode }}:%20{{ article.summary|striptags|urlencode }}&url={{ SITEURL }}/{{ article.url }}">Twitter</a></p>
     </div>
 {% endblock %}
 
