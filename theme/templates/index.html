@@ -7,6 +7,13 @@
 {% block content_title %}
 <div class="content-title">
     <h1>{{ SITETITLE|default("This is a default site's title") }}</h1>
+    {% if ADD_DISCLAIMER_SHORT|default("false") %}
+    <div class="article">
+        <div class="well small">
+            <h4>{{ DISCLAIMER_SHORT|default("") }}</h4>
+        </div>
+    </div>
+    {% endif %}
 </div>
 {% endblock %}
 

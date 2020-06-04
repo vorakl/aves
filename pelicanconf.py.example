@@ -5,13 +5,17 @@ from __future__ import unicode_literals
 ### Basic configuration
 ########################
 
-AUTHOR = u'Oleksii Tsvietnov'
+AUTHOR = u'vorakl'
 SITENAME = u"Vorakl's notes"
 SITEURL = 'https://vorakl.com'
-SITEDESC = u"A technical blog of Oleksii Tsvietnov about Automation, Programming, Operating Systems, Clouds, Monitoring, Performance Tuning and Troubleshooting, and many other aspects of Systems and Software Engineering"
+SITEDESC = u"A technical blog about Automation, Programming, Operating Systems, Clouds, Monitoring, Performance Tuning and Troubleshooting, and many other aspects of Systems and Software Engineering"
 SITETITLE = u"Notes about Systems and Software Engineering"
+DISCLAIMER_SHORT = u"All ideas, examples and opinions on this personal website are the result of my own practice at spare time, belong to me and don't relate to my work at any companies."
+ADD_DISCLAIMER_SHORT = True
+DISCLAIMER_LONG = u"This is my personal blog. All ideas, opinions, examples, and other information that can be found here are my own and belong entirely to me. This is the result of my personal efforts and activities at my free time. It doesn't relate to any professional work I've done and doesn't have correlations with any companies I worked for, I'm currently working, or will work in the future."
+ADD_DISCLAIMER_LONG = True
 SITE_VERSION = '1561400933'
-SITE_KEYWORDS = 'vorakl,Oleksii Tsvietnov,blog,systems engineering,operations,software engineering'
+SITE_KEYWORDS = 'vorakl,blog,systems engineering,operations,software engineering'
 PATH = 'content' # the location of all content
 ARTICLE_PATHS = ['articles'] # a place for articles under the content location
 PAGE_PATHS = ['pages']
@@ -29,7 +33,6 @@ FAVICON_TEMPLATE = "favicon.html"
 #THEME_MENU_COLOR_1 = "#2e435e"
 #THEME_MENU_COLOR_2 = "#205081"
 COUNTER_TEMPLATE = "counter.html"
-ADD_SHARING_LINKS = True
 PLUGIN_PATHS = ['/plugins']
 PLUGINS = ['post_stats', 'minify'] # keep 'minify' plugin as the last element in the list to minify all output HTMLs
 

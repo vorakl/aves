@@ -23,12 +23,6 @@
 </div>
 {% endblock %}
 
-{% block content_sharing %}
-    <div class="article">
-        <p>Share on <a href="https://twitter.com/intent/tweet?text={{ page.title|urlencode }}:%20{{ page.summary|striptags|urlencode }}&url={{ SITEURL }}/{{ page.url }}">Twitter</a></p>
-    </div>
-{% endblock %}
-
 {% block copyright_notice %}
     <span class="pull-left">
         &copy; {{ page.date.strftime('%Y') }} <a href="{{ CONTACT_URL|default("#") }}">{{ AUTHOR }}</a> All Rights Reserved

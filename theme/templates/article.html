@@ -18,10 +18,14 @@
     </div>
 {% endblock %}
 
-{% block content_sharing %}
+{% block disclaimer_long %}
+    {% if ADD_DISCLAIMER_LONG|default("false") %}
     <div class="article">
-        <p>Share on <a href="https://twitter.com/intent/tweet?text={{ article.title|urlencode }}:%20{{ article.summary|striptags|urlencode }}&url={{ SITEURL }}/{{ article.url }}">Twitter</a></p>
+        <div class="well small">
+            <h4>{{ DISCLAIMER_LONG|default("") }}</h4>
+        </div>
     </div>
+    {% endif %}
 {% endblock %}
 
 {% block copyright_notice %}
