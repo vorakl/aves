@@ -9,21 +9,19 @@
 {% block content %}
     <div class="article">
         <div class="content-title">
-            <h1>{{ article.title }}</h1>
+            <h2>{{ article.title }}</h2>
             <div class="well small">{% include "metadata.html" %}</div>
             <p><h3>{{ article.summary|striptags }}</h3></p>
         </div>
 
-        <div>{{ article.content }}</div>
+        <div class="content">{{ article.content }}</div>
     </div>
 {% endblock %}
 
 {% block disclaimer_long %}
     {% if ADD_DISCLAIMER_LONG|default("false") %}
     <div class="article">
-        <div class="well small">
-            <h4>{{ DISCLAIMER_LONG|default("") }}</h4>
-        </div>
+        <div class="well small"><h5>{{ DISCLAIMER_LONG|default("") }}</h5></div>
     </div>
     {% endif %}
 {% endblock %}

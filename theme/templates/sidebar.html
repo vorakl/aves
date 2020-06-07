@@ -1,6 +1,6 @@
 {% if DISPLAY_MENUITEMS_ON_SIDEBAR|default("false") %}
     {% if MENUITEMS %}
-    <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+    <div class="well" style="padding: 8px 0">
     <ul class="nav nav-list">
         <li class="nav-header">
             {{ DISPLAY_SIDEBAR_MENUITEMS_NAME|default("MENU") }}
@@ -15,7 +15,7 @@
 {% endif %}
 
 {% if DISPLAY_SITE_ON_SIDEBAR|default("true") %}
-<div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+<div class="well" style="padding: 8px 0">
     <ul class="nav nav-list">
         <li class="nav-header"> 
             {{ DISPLAY_SIDEBAR_SITE_NAME|default("SITE") }}
@@ -59,7 +59,7 @@
 
 {% if DISPLAY_LINKS_ON_SIDEBAR|default("true") %}
     {% if LINKS %}
-    <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+    <div class="well" style="padding: 8px 0">
     <ul class="nav nav-list">
         <li class="nav-header"> 
             {{ DISPLAY_SIDEBAR_LINKS_NAME|default("LINKS") }}
@@ -75,7 +75,7 @@
 
 {% if DISPLAY_PAGES_ON_SIDEBAR|default("true") %}
     {% if pages %}
-    <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+    <div class="well" style="padding: 8px 0">
     <ul class="nav nav-list">
         <li class="nav-header"> 
             {{ DISPLAY_SIDEBAR_PAGES_NAME|default("PAGES") }}
@@ -91,7 +91,7 @@
 
 {% if DISPLAY_CATEGORIES_ON_SIDEBAR|default("true") %}
     {% if categories %}
-    <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+    <div class="well" style="padding: 8px 0;">
     <ul class="nav nav-list">
         <li class="nav-header"> 
             {{ DISPLAY_SIDEBAR_CATEGORIES_NAME|default("CATEGORIES") }}
@@ -107,7 +107,7 @@
 
 {% if DISPLAY_TAGS_ON_SIDEBAR|default("true") %}
     {% if tags %}
-    <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+    <div class="well" style="padding: 8px 0;">
     <ul class="nav nav-list">
         <li class="nav-header"> 
             {{ DISPLAY_SIDEBAR_TAGS_NAME|default("TAGS") }}

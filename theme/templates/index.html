@@ -8,54 +8,40 @@
 <div class="content-title">
     <h1>{{ SITETITLE|default("This is a default site's title") }}</h1>
     {% if ADD_DISCLAIMER_SHORT|default("false") %}
-    <div class="article">
-        <div class="well small">
-            <h4>{{ DISCLAIMER_SHORT|default("") }}</h4>
-        </div>
-    </div>
+    <div class="well small"><h5>{{ DISCLAIMER_SHORT|default("") }}</h5></div>
     {% endif %}
 </div>
 {% endblock %}
 
 {% block content %}        
 {% if articles %}
-{% for article in articles_page.object_list %}        
+<table class="table">
+    <tbody>
+    {% for article in articles_page.object_list %}
+    {# First item #}
+    {% if loop.first and not articles_page.has_previous() %}
+        <tr>
+            <td class="span3">{{ article.date.strftime("%Y-%m-%d") }}</td>
+            <td class="span9"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></td>
+        </tr>
 
-{# First item #}
-{% if loop.first and not articles_page.has_previous() %}
-    <div class="article">
-        <div class="header">
-            <a href="{{ SITEURL }}/{{ article.url }}"><h2>{{ article.title }}</h2></a>
-            <div class="well small">{% include "metadata.html" %}</div>
-        </div>
-        <div class="summary">
-            <div class="entry-content">{{ article.summary }}</div>
-            <a class="btn btn-info xsmall" href="{{ SITEURL }}/{{ article.url }}">read more</a>
-        </div>
-    </div>	
-		
-    {% if loop.length == 1 %}
-        {% include 'pagination.html' %}
-    {% endif %}
-{# other items #}
-{% else %} 
-    <div class="article">
-        <div class="header">
-            <a href="{{ SITEURL }}/{{ article.url }}"><h2>{{ article.title }}</h2></a>
-            <div class="well small">{% include "metadata.html" %}</div>
-        </div>
-        <div class="summary">
-            <div class="entry-content">{{ article.summary }}</div>
-            <a class="btn btn-info xsmall" href="{{ SITEURL }}/{{ article.url }}">read more</a>
-        </div>
-    </div>	
-				
-    {% if loop.last and (articles_page.has_previous() or not articles_page.has_previous() and loop.length > 1) %}
-        {% include 'pagination.html' %}
-    {% endif %}
-{% endif %} {# First item if #}
+        {% if loop.length == 1 %}
+            </tbody></table>
+            {% include 'pagination.html' %}
+        {% endif %}
+    {# other items #}
+    {% else %}
+        <tr>
+            <td class="span3">{{ article.date.strftime("%Y-%m-%d") }}</td>
+            <td class="span9"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></td>
+        </tr>
 
-{% endfor %} {# For article #}
+        {% if loop.last and (articles_page.has_previous() or not articles_page.has_previous() and loop.length > 1) %}
+            </tbody></table>
+            {% include 'pagination.html' %}
+        {% endif %}
+    {% endif %} {# First item if #}
+    {% endfor %} {# For article #}
 {% endif %} {# If articles #}
 
 {% endblock content %}
