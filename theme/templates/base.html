@@ -47,13 +47,28 @@
 <div class="container">
     <div class="content">
     <div class="row">
-        <div {% if DISPLAY_SIDEBAR|default("true") %}class="span9"{% else %}class="span12"{% endif %}>
+        {% if page  %}
+            {% if page.sidebar %}
+                {% set sidebar = page.sidebar %}
+            {% else %}
+                {% set sidebar = DISPLAY_PAGE_SIDEBAR %}
+            {% endif %}
+        {% elif article %} 
+            {% if article.sidebar %}
+                {% set sidebar = article.sidebar %}
+            {% else %}
+                {% set sidebar = DISPLAY_PAGE_SIDEBAR %}
+            {% endif %}
+        {% else %}
+            {% set sidebar = DISPLAY_INDEX_SIDEBAR %}
+        {% endif %}
+        <div {% if sidebar %}class="span9"{% else %}class="span12"{% endif %}>
             {% block content_title %}{% endblock %}
             {% block content %}{% endblock %}
-            {% if ADD_DISCLAIMER_LONG|default("false") %}{% block disclaimer_long %}{% endblock %}{% endif %}
+            {% if ADD_DISCLAIMER_LONG|default(False) %}{% block disclaimer_long %}{% endblock %}{% endif %}
         </div>
 
-        {% if DISPLAY_SIDEBAR|default("true") %}
+        {% if sidebar %}
             <div class="span3">
                 {% include "sidebar.html" %}
             </div>
