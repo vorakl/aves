@@ -49,13 +49,13 @@
     <div class="row">
         {% if page  %}
             {% if page.sidebar %}
-                {% set sidebar = page.sidebar %}
+                {% set sidebar = True if page.sidebar|string() == "True" else False %}
             {% else %}
                 {% set sidebar = DISPLAY_PAGE_SIDEBAR %}
             {% endif %}
         {% elif article %} 
             {% if article.sidebar %}
-                {% set sidebar = article.sidebar %}
+                {% set sidebar = True if article.sidebar|string() == "True" else False %}
             {% else %}
                 {% set sidebar = DISPLAY_PAGE_SIDEBAR %}
             {% endif %}
