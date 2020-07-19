@@ -65,7 +65,7 @@
         <div {% if sidebar %}class="span9"{% else %}class="span12"{% endif %}>
             {% block content_title %}{% endblock %}
             {% block content %}{% endblock %}
-            {% if ADD_DISCLAIMER_LONG|default(False) %}{% block disclaimer_long %}{% endblock %}{% endif %}
+            {% if ADD_DISCLAIMER_LONG %}{% block disclaimer_long %}{% endblock %}{% endif %}
         </div>
 
         {% if sidebar %}
