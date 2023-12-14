@@ -9,10 +9,6 @@
     {% block canonical %}{% endblock %}
     {% block description %}{% endblock %}
 
-    <!--[if lt IE 9]>
-    <script src="{{ SITEURL }}/theme/html5.js?v={{ SITE_VERSION }}"></script>
-    <![endif]-->
-
     <link rel="stylesheet" href="{{ SITEURL }}/theme/bootstrap-pygments.bundle.min.css?v={{ SITE_VERSION }}">
     {% if LOCALCSS_TEMPLATE %}
     <style>
@@ -120,7 +116,6 @@
     </footer>
 </div>
 
-<script src="{{ SITEURL }}/theme/jquery-bootstrap-collapse.bundle.min.js?v={{ SITE_VERSION }}"></script>
 {% include "analytics.html" %}
 </body>
 </html>
