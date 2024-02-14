@@ -12,8 +12,8 @@
             <h2>{{ article.title }}</h2>
             <div class="well small">{% include "metadata.html" %}</div>
             <p><h3>{{ article.summary|striptags }}</h3></p>
+            <div style="text-align: center; font-size: 0.8em; font-style: italic">Found a bug or typo? Please, send me <a href="/pages/feedback/">feedback</a> or submit a <a href="{{ TYPO_GH_URL|default("") }}/{{ article.slug|striptags }}.rst">PR on Github</a>.</div>
         </div>
-
         <div class="content">{{ article.content }}</div>
     </div>
 {% endblock %}
