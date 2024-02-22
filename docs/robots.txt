@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: /unknown/
-
-Sitemap: https://aves.cf/sitemap.xml
