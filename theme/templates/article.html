@@ -9,9 +9,9 @@
 {% block content %}
     <div class="article">
         <div class="content-title">
-            <h2>{{ article.title }}</h2>
+            <h1>{{ article.title }}</h1>
             <div class="well small">{% include "metadata.html" %}</div>
-            <p><h3>{{ article.summary|striptags }}</h3></p>
+            <p><h3 style="text-decoration-line: none">{{ article.summary|striptags }}</h3></p>
         </div>
         <div class="content">{{ article.content }}</div>
     </div>
