@@ -3,7 +3,7 @@
 {% block canonical %}<link rel="canonical" href="{{ SITEURL }}/{{ category.url }}"/>{% endblock %}
 {% block robots %}<meta name="robots" content="noindex, nosnippet">{% endblock %}
 
-{% block title %}{{ CATEGORIES_DESCRIPTION[category] if category in CATEGORIES_DESCRIPTION|list else category }} :: {{ SITENAME }}{% endblock %}
+{% block title %}{{ CATEGORIES_DESCRIPTION[category] if category in CATEGORIES_DESCRIPTION|list else category }} - {{ SITENAME }}{% endblock %}
 
 {% block content_title %}
 <div class="content-title">

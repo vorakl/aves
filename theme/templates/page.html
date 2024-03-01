@@ -4,7 +4,7 @@
 {% block robots %}<meta name="robots" content="{{ page.robots if page.robots else 'all' }}" />{% endblock %}
 {% block description %}<meta name="description" content="{{ page.summary|striptags if page.summary else page.title }}" />{% endblock %}
 
-{% block title %}{{ page.title }} :: {{ SITENAME }}{% endblock %}
+{% block title %}{{ page.title }} - {{ SITENAME }}{% endblock %}
 
 {% block content %}
 <div class="article">
